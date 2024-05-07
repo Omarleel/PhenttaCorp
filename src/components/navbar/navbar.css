@@ -7,8 +7,8 @@
 .container-buscador {
     @apply relative w-full max-w-80;
 }
-.menu {
-    @apply flex items-center text-white hover:bg-hover-selector-light dark:hover:bg-hover-selector-dark rounded-md;
+.menu-navbar {
+    @apply py-2 px-3 flex items-center text-[#505050] dark:text-white hover:bg-hover-selector-light dark:hover:bg-hover-selector-dark rounded-md;
 }
 .container-menu {
     @apply max-sm:hidden flex space-x-2 items-center;

@@ -39,13 +39,13 @@ export const Navbar = () => {
 
               </React.Fragment>
             ) : (
-              <NavLink key={menuItem.label} to={menuItem.link} className={({ isActive }) => `${isActive ? 'current-menu' : 'menu'}`}>
+              <NavLink key={menuItem.label} to={menuItem.link} className={({ isActive }) => `${isActive ? 'current-menu' : 'menu-navbar'}`}>
                 <h4 className="my-0">{menuItem.label}</h4>
               </NavLink>
             )
         ))}
         <div>
-          <button onClick={toggleDropdown} className="menu my-0">
+          <button onClick={toggleDropdown} className="menu-navbar my-0">
             <HiOutlineGlobeAlt size={sizeIcons} />
           </button>
           <div
@@ -55,7 +55,7 @@ export const Navbar = () => {
             <ul className={`${isDropdownOpen ? 'opacity-100' : 'opacity-0'} transition-all duration-200`}>
               {currentMenu.base.find(item => item.label === 'Idiomas' || item.label === 'Languages')?.items.map((idioma, index) => (
                 <li className='cursor-pointer' key={index}>
-                  <a className="menu" onClick={() => handleDropdown(idioma.code)}>
+                  <a className="menu-navbar" onClick={() => handleDropdown(idioma.code)}>
                     {idioma.label}
                   </a>
                 </li>
