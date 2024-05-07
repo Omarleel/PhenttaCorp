@@ -1,0 +1,22 @@
+.container-sidebar {
+    @apply sm:hidden bg-secondary-light dark:bg-secondary-dark absolute z-50  transition-all duration-300 ;
+}
+.container-toggle {
+    @apply fixed top-0 right-0 h-[72px] flex justify-between p-4 ml-3;
+}
+.btn-toggle {
+    @apply text-[#505050] dark:text-white focus:outline-none focus:text-[#505050] dark:focus:text-white;
+}
+
+.container-menu-sidebar {
+    @apply fixed top-[72px] h-screen text-sm transition-all duration-300 w-56;
+}
+.menu-container {
+    @apply flex items-center text-white hover:bg-hover-selector-light dark:hover:bg-hover-selector-dark rounded-md;
+}
+.current-menu {
+    @apply py-2 px-3 text-white bg-selector-light rounded dark:bg-selector-dark;
+}
+.menu {
+    @apply py-2 px-3 text-[#505050] dark:text-white;
+}

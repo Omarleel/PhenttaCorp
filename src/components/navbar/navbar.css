@@ -1,0 +1,18 @@
+.container-navbar {
+    @apply bg-secondary-light dark:bg-secondary-dark h-[72px] fixed top-0 w-full  z-40 p-4 flex justify-between space-x-1.5;
+}
+.container-logo {
+    @apply w-36;
+}
+.container-buscador {
+    @apply relative w-full max-w-80;
+}
+.menu {
+    @apply flex items-center text-white hover:bg-hover-selector-light dark:hover:bg-hover-selector-dark rounded-md;
+}
+.container-menu {
+    @apply max-sm:hidden flex space-x-2 items-center;
+}
+.current-menu {
+    @apply py-2 px-3 text-white bg-selector-light rounded dark:bg-selector-dark;
+}
