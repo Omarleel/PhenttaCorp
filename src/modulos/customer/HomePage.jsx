@@ -1,18 +1,30 @@
-import { NavLink } from "react-router-dom";
-import { HiDeviceMobile } from 'react-icons/hi';
-import { backgroundImageUrl, sizeIcons } from "../../constants/constants";
-import { presentacion, servicios, trabajarConNosotros } from "../../mocks/data";
+import { menus, presentacion, servicios, trabajarConNosotros } from "../../mocks/data";
 import { useLanguage } from "../../hooks/useLanguage";
+import { useEffect } from "react";
+import { useLocation } from 'react-router-dom';
 
 export const HomePage = () => {
   const { language } = useLanguage();
   const dataPresentacion = presentacion.find(presentacion => presentacion.idioma === language)['base'];
   const dataServicios = servicios.find(servicio => servicio.idioma === language);
   const dataTrabajarConNosotros = trabajarConNosotros.find(trabajarConNosotros => trabajarConNosotros.idioma === language);
+  const location = useLocation();
+  const menuBase = menus.find(menu => menu.idioma === language)['base'];
+
+  useEffect(() => {
+    const hash = location.pathname.replace('/', '#');
+    if (hash) {
+      const targetElement = document.querySelector(hash);
+      if (targetElement) {
+        // Realizar el scroll suave hacia el elemento
+        targetElement.scrollIntoView({ behavior: 'smooth' });
+      }
+    }
+  }, [location]);
   return (
     <div className="container-page">
       {/* Sección de presentación */}
-      <div className="sm:flex justify-center items-center h-screen relative mx-10">
+      <div id={menuBase[0].link.replace('/', '')} className="sm:flex justify-center items-center h-screen relative mx-10">
         {/* Contenedor del Texto (Columna 2) */}
         <div className="sm:w-2/4 max-sm:w-full max-sm:my-8 text-center sm:order-2">
           {dataPresentacion &&
@@ -29,7 +41,7 @@ export const HomePage = () => {
         </div>
       </div>
       {/* Sección de servicios */}
-      <div className="flex flex-col justify-center items-center relative p-4">
+      <div id={menuBase[1].link.replace('/', '')} className="flex flex-col justify-center items-center relative p-4">
         {dataServicios['titulo'] && (
           <h1>{dataServicios['titulo']}</h1>
         )}
@@ -43,7 +55,7 @@ export const HomePage = () => {
         </div>
       </div>
       {/* Sección de Por qué trabajar con nosotros */}
-      <div className="flex flex-col justify-center items-center relative p-4">
+      <div id={menuBase[2].link.replace('/', '')} className="flex flex-col justify-center items-center relative p-4">
         {dataTrabajarConNosotros['titulo'] && (
           <h1>{dataTrabajarConNosotros['titulo']}</h1>
         )}

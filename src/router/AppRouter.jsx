@@ -36,7 +36,7 @@ export const AppRouter = () => {
       ) : user['role'] === 'customer' ? (
         <>
           <Route path='/*' element={<CustomerRoutes />} />
-          <Route path='*' element={<Navigate to='/inicio' />} />
+          <Route path='*' element={<Navigate to='/' />} />
         </>
       ) : (
         <>
