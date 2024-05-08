@@ -4,6 +4,10 @@ export const direccion = "Av. de la Participación 638";
 export const RUC = "10716673788";
 export const celular = "917800710";
 export const correo = "contacto@phentta.com";
+// Redes sociales
+export const urlFacebook = "https://www.facebook.com/phentta.com";
+export const urlInstagram = "https://www.instagram.com/phentta.com";
+export const urlYoutube = "#";
 // Assets (imagenes)
 export const rutaLogoPimarioDark = "/assets/images/primary-logo-dark.png";
 export const rutaLogoPimarioLight = "/assets/images/primary-logo-light.png";

@@ -16,6 +16,15 @@ export const Sidebar = () => {
   const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Estado para controlar la apertura/cierre del sidebar
 
   const toggleSidebar = () => {
+    const submenu = document.getElementById("submenu2");
+    if (!isSidebarOpen === false) {
+      setTimeout(() => {
+        submenu.classList.add("hidden");
+      }, 200);
+    }
+    else{
+      submenu.classList.add("block");
+    }
     if (isSidebarOpen) {
       setShowSubmenu(false);
     }
@@ -65,7 +74,7 @@ export const Sidebar = () => {
               {menuItem.items ? (
                 <>
                   <button
-                    className='w-full menu-sidebar menu-container cursor-pointer'
+                    className='ml-2 w-full menu-sidebar menu-container cursor-pointer'
                     onClick={() => {
                       setIsSidebarOpen(true);
                       setShowSubmenu(!showSubmenu);
@@ -74,9 +83,9 @@ export const Sidebar = () => {
                     {menuItem.label}
                   </button>
                   {/* Renderizar submenú */}
-                  <ul className={`ml-4 ${showSubmenu ? 'h-auto' : 'h-0'} background-primary rounded transition-all duration-300`}>
+                  <ul id="submenu2" className={`ml-4 ${showSubmenu ? 'h-20' : 'h-0'} background-primary rounded transition-all duration-300 flex flex-col justify-center`}>
                     {currentMenu.base.find(item => item.label === 'Idiomas' ||  item.label === 'Languages')?.items.map((idioma, index) => (
-                      <li className='cursor-pointer' key={index}>
+                      <li className={`cursor-pointer ${showSubmenu ? 'pointer-events-auto' : 'pointer-events-none' }`} key={index}>
                         <a className={`${showSubmenu ? 'visible' : 'invisible'} menu-sidebar menu-container`} onClick={() => handleDropdown(idioma.code)}>
                           {idioma.label}
                         </a>
@@ -97,7 +106,7 @@ export const Sidebar = () => {
             </li>
           ))}
           <li className="mb-2">
-            <a href="#" onClick={handleThemeSwitch} className='menu-sidebar menu-container'>
+            <a href="#" onClick={handleThemeSwitch} className='ml-2 block menu-sidebar menu-container'>
               <div className="flex items-center">
                 {isDark ? (<><HiMoon size={sizeIcons} /><span className={`ml-2 ${isSidebarOpen ? 'block' : 'hidden'}`}> Tema oscuro</span></>) : (<><HiSun size={sizeIcons} /> <span className={`ml-2 ${isSidebarOpen ? 'block' : 'hidden'}`}>Tema claro</span></>)}
               </div>

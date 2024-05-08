@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import { NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom'
 import { HiOutlineSearch, HiOutlineGlobeAlt } from 'react-icons/hi';
 import { rutaLogoPimarioDark, rutaLogoPimarioLight, sizeIcons } from '../../constants/constants';
 import './navbar.css';
@@ -8,17 +8,24 @@ import { useLanguage } from '../../hooks/useLanguage';
 import { menus } from '../../mocks/data';
 
 export const Navbar = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [showSubmenu, setShowSubmenu] = useState(false);
   const { setPreferredLanguage, language } = useLanguage();
-  const dropdownRef = useRef(null);
   const { isDark } = useTheme();
 
   const toggleDropdown = () => {
-    setIsDropdownOpen(!isDropdownOpen);
+  	const submenu = document.getElementById("submenu");
+    if (!showSubmenu === false) {
+      setTimeout(() => {
+        submenu.classList.add("hidden");
+      }, 200);
+    }
+    else{
+      submenu.classList.add("block");
+    }
+    setShowSubmenu(!showSubmenu);
   };
-
   const handleDropdown = (code) => {
-    setIsDropdownOpen(false);
+    setShowSubmenu(false);
     setPreferredLanguage(code);
   };
 
@@ -28,7 +35,7 @@ export const Navbar = () => {
   return (
     <nav className="container-navbar">
       <div className="container-logo">
-        <NavLink to="/home">
+        <NavLink to="/">
           <img className="h-9 min-w-fit" src={isDark ? rutaLogoPimarioDark : rutaLogoPimarioLight} alt="Logo" />
         </NavLink>
       </div>
@@ -49,18 +56,17 @@ export const Navbar = () => {
             <HiOutlineGlobeAlt size={sizeIcons} />
           </button>
           <div
-            ref={dropdownRef}
-            className={`${isDropdownOpen ? 'h-20' : 'h-0'} absolute rounded-b right-0 top-[72px] w-36 background-secondary transition-all duration-300`}
+            className={`${showSubmenu ? 'h-20' : 'h-0'} absolute rounded-b right-0 top-[72px] w-36 background-secondary transition-all duration-300 flex flex-col justify-center`}
           >
-            <ul className={`${isDropdownOpen ? 'opacity-100' : 'opacity-0'} transition-all duration-200`}>
-              {currentMenu.base.find(item => item.label === 'Idiomas' || item.label === 'Languages')?.items.map((idioma, index) => (
-                <li className='cursor-pointer' key={index}>
-                  <a className="menu-navbar" onClick={() => handleDropdown(idioma.code)}>
-                    {idioma.label}
-                  </a>
-                </li>
-              ))}
-            </ul>
+            <ul id="submenu" className={`${showSubmenu ? 'h-20' : 'h-0'} background-secondary rounded transition-all duration-300 flex flex-col justify-center`}>
+                    {currentMenu.base.find(item => item.label === 'Idiomas' ||  item.label === 'Languages')?.items.map((idioma, index) => (
+                      <li className={`cursor-pointer ${showSubmenu ? 'pointer-events-auto' : 'pointer-events-none' }`} key={index}>
+                        <a className={`${showSubmenu ? 'visible' : 'invisible'} container-menu  menu-navbar`} onClick={() => handleDropdown(idioma.code)}>
+                          {idioma.label}
+                        </a>
+                      </li>
+                    ))}
+                  </ul>
           </div>
         </div>
       </div>

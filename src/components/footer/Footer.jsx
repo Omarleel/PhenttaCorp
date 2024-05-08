@@ -1,11 +1,20 @@
-import { celular, correo, dominio, nombreOrganizacion, sizeIcons } from "../../constants/constants";
+import React from 'react';
+import { celular, correo, dominio, nombreOrganizacion, rutaLogoPimarioDark, rutaLogoPimarioLight, sizeIcons, urlFacebook, urlInstagram, urlYoutube } from "../../constants/constants";
 import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa6";
 import { HiPhone, HiMail } from "react-icons/hi";
 import { detectarDispositivo } from "../../utilities/utils";
 import { useEffect, useState } from "react";
+import { useTheme } from "../../hooks/useTheme";
+import { useLanguage } from "../../hooks/useLanguage";
+import { contactanos, derechosReservados, encontrarnos } from "../../mocks/data";
 
 export const Footer = () => {
+    const { language } = useLanguage();
+    const { isDark } = useTheme();
     const [whatsappShareUrl, setWhatsappShareUrl] = useState("");
+    const dataContactanos = contactanos.find(contactanos => contactanos.idioma === language)['base'];
+    const dataEncontrarnos = encontrarnos.find(encontrarnos => encontrarnos.idioma === language)['base'];
+    const dataDerechosReservados = derechosReservados.find(derechosReservados => derechosReservados.idioma === language)['base'];
     useEffect(() => {
         const dispositivo = detectarDispositivo();
         if (dispositivo === 'PC') {
@@ -21,43 +30,46 @@ export const Footer = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
                 {/* Sección "Quiénes somos" */}
                 <div>
-                    <h2 className="mb-3">¿Quieres llevar tu empresa al siguiente nivel? </h2>
-                    <p className="text-center">
-                        Contáctanos hoy mismo.
-                    </p>
-                    <div className="flex justify-between">
-                        <div className="flex items-center space-x-1">
+                {dataContactanos && dataContactanos.map((contactanos, index) => (
+                    <React.Fragment key={index}>
+                        <h2 className="mb-3">{contactanos.title} </h2>
+                        <p className="text-center">
+                            {contactanos.description}
+                        </p>
+                    </React.Fragment>
+                ))}
+                    <div className="flex justify-between mt-3">
+                        <div className="flex items-center space-x-2">
                             <HiPhone size={sizeIcons}/>
                             <div className="flex flex-col">
-                                <span>Por teléfono</span>
-                                <span>(+51) {celular}</span>
+                                <a href={`tel:51${celular}`}>(+51) {celular}</a>
                             </div>
 
                         </div>
-                        <div className="flex items-center space-x-1">
+                        <div className="flex items-center space-x-2">
                             <HiMail size={sizeIcons}/>
                             <div className="flex flex-col">
-                                <span>Por email</span>
-                                <span>{correo}</span>
+                                <a href={`mailto:${correo}`}>{correo}</a>
                             </div>
 
                         </div>
                     </div>
                 </div>
                 {/* Sección "Redes sociales" */}
-                <div>
-                    <h3 className="mb-3">Nuestras redes sociales</h3>
+                <div className="flex flex-col items-center justify-center">
+                    <img className="h-9 min-w-fit" src={isDark ? rutaLogoPimarioDark : rutaLogoPimarioLight} alt="Logo" />
+                    <h3 className="mb-3">{dataEncontrarnos[0].title}</h3>
                     <div className="flex justify-center items-center space-x-4">
-                        <a href="https://www.facebook.com/NeoPhone.Pe/" target="_blank">
+                        <a href={urlFacebook} target="_blank">
                             <FaFacebook size={sizeIcons} className="icon-button bg-facebook" />
                         </a>
-                        <a href="https://www.instagram.com/NeoPhone.Pe/" target="_blank">
+                        <a href={urlInstagram} target="_blank">
                             <FaInstagram size={sizeIcons} className="icon-button bg-instagram" />
                         </a>
                         <a className="btn-whatsapp" target="_blank" href={`${whatsappShareUrl}`}>
                             <FaWhatsapp size={sizeIcons} className="icon-button bg-whatsapp" />
                         </a>
-                        <a href="#" target="_blank">
+                        <a href={urlYoutube} target="_blank">
                             <FaYoutube size={sizeIcons} className="icon-button bg-youtube" />
                         </a>
                     </div>
@@ -68,7 +80,7 @@ export const Footer = () => {
 
             {/* Footer bottom */}
             <div className="footer-bottom mt-6 text-sm text-center">
-                <p>© 2024 Todos los Derechos Reservados - <a href={`https://${dominio}`} className="text-primary font-bold hover:underline">{nombreOrganizacion}</a></p>
+                <p>© 2024 {dataDerechosReservados[0].title} - <a href={`https://${dominio}`} className="text-primary font-bold hover:underline">{nombreOrganizacion}</a></p>
             </div>
         </footer>
     );
