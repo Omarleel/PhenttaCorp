@@ -16,19 +16,25 @@ export const HomePage = () => {
   const menuBase = menus.find(menu => menu.idioma === language)['base'];
 
   useEffect(() => {
-    const hash = location.pathname.replace('/', '#');
-    if (hash) {
-      const targetElement = document.querySelector(hash);
-      if (targetElement) {
-        // Calcular la posición de desplazamiento restando 72px
-        const scrollPosition = targetElement.offsetTop - 72;
-        // Realizar el scroll suave hacia la posición calculada
-        window.scroll({
-          top: scrollPosition,
-          behavior: 'smooth'
-        });
+    const timeoutId = setTimeout(() => {
+      const hash = location.pathname.replace('/', '#');
+      if (hash) {
+        const targetElement = document.querySelector(hash);
+        if (targetElement) {
+          // Calcular la posición de desplazamiento restando 72px
+          const scrollPosition = targetElement.offsetTop - 72;
+          // Realizar el scroll suave hacia la posición calculada
+          window.scroll({
+            top: scrollPosition,
+            behavior: 'smooth'
+          });
+        }
       }
-    }
+    }, 400);
+
+    return () => {
+      clearTimeout(timeoutId);
+    };
   }, [location]);
   return (
     <div className="container-page">
