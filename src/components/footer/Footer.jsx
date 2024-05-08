@@ -32,7 +32,7 @@ export const Footer = () => {
                 <div>
                 {dataContactanos && dataContactanos.map((contactanos, index) => (
                     <React.Fragment key={index}>
-                        <h2 className="mb-3">{contactanos.title} </h2>
+                        <h3 className="mb-3">{contactanos.title} </h3>
                         <p className="text-center">
                             {contactanos.description}
                         </p>
@@ -41,14 +41,14 @@ export const Footer = () => {
                     <div className="flex justify-between mt-3">
                         <div className="flex items-center space-x-2">
                             <HiPhone size={sizeIcons}/>
-                            <div className="flex flex-col">
+                            <div className="flex flex-col hover-text">
                                 <a href={`tel:51${celular}`}>(+51) {celular}</a>
                             </div>
 
                         </div>
                         <div className="flex items-center space-x-2">
                             <HiMail size={sizeIcons}/>
-                            <div className="flex flex-col">
+                            <div className="flex flex-col hover-text">
                                 <a href={`mailto:${correo}`}>{correo}</a>
                             </div>
 
@@ -58,7 +58,7 @@ export const Footer = () => {
                 {/* Sección "Redes sociales" */}
                 <div className="flex flex-col items-center justify-center">
                     <img className="h-9 min-w-fit" src={isDark ? rutaLogoPimarioDark : rutaLogoPimarioLight} alt="Logo" />
-                    <h3 className="mb-3">{dataEncontrarnos[0].title}</h3>
+                    <h4 className="!mt-3 !mb-2">{dataEncontrarnos[0].title}</h4>
                     <div className="flex justify-center items-center space-x-4">
                         <a href={urlFacebook} target="_blank">
                             <FaFacebook size={sizeIcons} className="icon-button bg-facebook" />

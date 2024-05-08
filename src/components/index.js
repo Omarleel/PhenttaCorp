@@ -1,3 +1,4 @@
+export * from './CustomCarrousel';
 export * from './CustomCustomers';
 export * from './CustomCustomerForm';
 export * from './CustomDate';

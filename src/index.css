@@ -2,16 +2,29 @@
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
 
+@font-face {
+    font-family: 'Poppins-Regular';
+    src: url('/assets/fonts/Poppins-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    font-family: 'Poppins-Regular', sans-serif;
+}
 
 .background-primary {
     @apply bg-primary-light dark:bg-primary-dark;
 }
+
 .background-secondary {
     @apply bg-secondary-light dark:bg-secondary-dark;
 }
+
 .text-color-primary {
     @apply text-black dark:text-white;
 }
+
 .container-page {
     @apply background-primary mt-[72px];
 }
@@ -19,6 +32,7 @@
 .primary-input {
     @apply border border-gray-300 px-3 py-2 focus:border-indigo-500 placeholder-gray-500 outline-none bg-primary-light text-black pr-4 py-2 rounded-lg dark:border-dark dark:text-white dark:bg-primary-dark dark:[color-scheme:dark];
 }
+
 .input-buscador {
     @apply outline-none bg-primary-light text-black pr-4 py-2 rounded-lg dark:border-dark dark:text-white dark:bg-primary-dark dark:[color-scheme:dark];
 }
@@ -26,58 +40,49 @@
 .btn-primary {
     @apply bg-[#fd5555] hover:bg-[#e27171] text-white font-bold py-2 px-4 rounded dark:bg-[#ff7943] dark:hover:bg-[#b86b4c]
 }
+
 .btn-primary-small {
     @apply bg-[#174CAA] text-white px-4 py-2 rounded-md shadow-md hover:bg-[#174CAA] m-2;
 }
+
 .btn-primary-outline {
-    @apply text-[#fd5555] hover:text-[#e27171] border border-[#fd5555] hover:border-[#e27171] font-bold py-2 px-4 rounded 
-    dark:text-[#ff7943] dark:hover:text-[#b86b4c] dark:border-[#ff7943] dark:hover:border-[#b86b4c]
+    @apply text-[#fd5555] hover:text-color-hover border border-[#fd5555] hover:border-[#e27171] font-bold py-2 px-4 rounded dark:text-[#ff7943] dark:hover:text-color-hover-dark dark:border-[#ff7943] dark:hover:border-[#b86b4c]
 }
+
 .btn-success {
     @apply text-white font-bold py-2 px-4 rounded hover:bg-green-600 !bg-green-500;
 }
+
 .border-success {
     box-shadow: 0 0 0 3px #22c55e !important;
 }
+
 .btn-danger {
     @apply text-white font-bold py-2 px-4 rounded hover:bg-red-600 !bg-red-500;
 }
+
 .btn-danger-outline {
     @apply text-red-500 border border-red-500 font-bold py-2 px-4 rounded hover:bg-red-500 hover:text-white dark:text-red-500 dark:border-red-500 dark:hover:bg-red-500 dark:hover:text-white;
 }
+
 .btn-warning {
     @apply text-white font-bold py-2 px-4 rounded hover:bg-yellow-600 !bg-yellow-500;
 }
+
 .btn-warning-outline {
     @apply text-yellow-500 border border-yellow-500 font-bold py-2 px-4 rounded hover:bg-yellow-500 hover:text-white dark:text-yellow-500 dark:border-yellow-500 dark:hover:bg-yellow-500 dark:hover:text-white;
 }
+
 .btn-secondary {
     @apply flex items-center justify-center rounded-full border border-gray-300 hover:bg-gray-100 dark:border-gray-700 dark:hover:bg-gray-800 transition-colors;
 }
+
 .modal-static {
     @apply scale-105;
 }
+
 .primary-label {
     @apply block my-2 font-medium text-color-primary;
-}
-.select-input {
-    @apply border truncate border-light bg-primary-light text-black px-4 py-2 rounded-lg dark:border-dark dark:text-white dark:bg-primary-dark dark:[color-scheme:dark]
-    bg-[linear-gradient(45deg,_transparent_50%,_rgb(0,_0,_0)_50%),_linear-gradient(135deg,_rgb(0,_0,_0)_50%,_transparent_50%),_linear-gradient(to_right,_rgb(241,_241,_241),_rgb(241,_241,_241))]
-    dark:bg-[linear-gradient(45deg,_transparent_50%,_white_50%),_linear-gradient(135deg,_white,_50%,_transparent_50%),_linear-gradient(to_right,_rgb(37,_40,_54),_rgb(37,_40,_54))];
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    background-position:
-    calc(100% - 20px) calc(1em + 2px),
-    calc(100% - 15px) calc(1em + 2px),
-    100% 0;
-    background-size:
-    5px 5px,
-    5px 5px,
-    2.5em 2.5em;
-    background-repeat: no-repeat;
 }
 
 h1 {
@@ -99,19 +104,25 @@ h4 {
 h5 {
     @apply text-sm mb-4 text-color-primary !m-0;
 }
-
+.hover-text {
+    @apply hover:text-color-hover dark:hover:text-color-hover-dark;
+}
 .icon-button {
     @apply text-white p-1 rounded;
 }
+
 .bg-facebook {
     @apply bg-[#0866ff];
 }
+
 .bg-instagram {
     @apply bg-gradient-to-tr from-yellow-500 to-purple-500 via-pink-500;
 }
+
 .bg-whatsapp {
     @apply bg-[#1ad03f];
 }
+
 .bg-youtube {
     @apply bg-[#ff0000];
 }

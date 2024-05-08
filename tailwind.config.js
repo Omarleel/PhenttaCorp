@@ -39,6 +39,12 @@ module.exports = {
         '.bg-hover-selector-dark': {
           backgroundColor: colors.hoverSelectorDark,
         },
+        '.text-color-hover': {
+          color: colors.hoverSelectorLight,
+        },
+        '.text-color-hover-dark': {
+          color: colors.hoverSelectorDark,
+        },
         '.border-light': {
           borderColor: colorNegro,
         },

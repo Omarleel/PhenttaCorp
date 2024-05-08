@@ -6,6 +6,8 @@ import { Navbar } from '../../components/navbar/Navbar';
 import { Footer } from '../../components/footer/Footer';
 import { menus } from '../../mocks/data';
 import { useLanguage } from '../../hooks/useLanguage';
+import { ContactUsPage } from '../customer/ContactUsPage';
+import { AboutUsPage } from '../customer/AboutUsPage';
 
 export const CustomerPage = () => {
   const { language } = useLanguage();
@@ -17,9 +19,11 @@ export const CustomerPage = () => {
       <section id="primary-container" className="w-full">
         <Navbar />
         <Routes>
-          {menu.base.map((menuItem, index) => (
+          {menu.base.slice(0, 2).map((menuItem, index) => ( // Definimos solo las rutas que llevan a la misma pagina
             <Route key={index} path={menuItem.link} element={<HomePage />} />
           ))}
+          <Route path={menu.base[2].link} element={<AboutUsPage />} />
+          <Route path={menu.base[3].link} element={<ContactUsPage />} />
           <Route path="*" element={<Navigate to={menu.base[0].link} />} />
         </Routes>
         <Footer />
