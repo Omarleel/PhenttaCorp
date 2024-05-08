@@ -2,6 +2,8 @@ import { menus, presentacion, servicios, trabajarConNosotros } from "../../mocks
 import { useLanguage } from "../../hooks/useLanguage";
 import { useEffect } from "react";
 import { useLocation } from 'react-router-dom';
+import { Carousel } from 'react-responsive-carousel';
+import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 export const HomePage = () => {
   const { language } = useLanguage();
@@ -24,7 +26,7 @@ export const HomePage = () => {
   return (
     <div className="container-page">
       {/* Sección de presentación */}
-      <div id={menuBase[0].link.replace('/', '')} className="sm:flex justify-center items-center h-screen relative mx-10">
+      <div id={menuBase[0].link.replace('/', '')} className="sm:flex justify-center items-center h-auto relative mx-10">
         {/* Contenedor del Texto (Columna 2) */}
         <div className="sm:w-2/4 max-sm:w-full max-sm:my-8 text-center sm:order-2">
           {dataPresentacion &&
@@ -41,11 +43,11 @@ export const HomePage = () => {
         </div>
       </div>
       {/* Sección de servicios */}
-      <div id={menuBase[1].link.replace('/', '')} className="flex flex-col justify-center items-center relative p-4">
+      <div id={menuBase[1].link.replace('/', '')} className="sm:flex sm:flex-col justify-center items-center relative p-4">
         {dataServicios['titulo'] && (
           <h1>{dataServicios['titulo']}</h1>
         )}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="max-sm:hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {dataServicios['base'] && dataServicios['base'].map((service, index) => (
             <div key={index} className="background-secondary rounded-lg shadow p-4">
               <h2>{service.title}</h2>
@@ -53,6 +55,14 @@ export const HomePage = () => {
             </div>
           ))}
         </div>
+        <Carousel className="sm:hidden max-sm:block rounded-lg" infiniteLoop={true} autoPlay={true} emulateTouch={true} showStatus={false} showThumbs={false}>
+          {dataServicios['base'] && dataServicios['base'].map((service, index) => (
+            <div key={index} className="background-secondary rounded-lg shadow px-4 pt-4 pb-10">
+              <h2>{service.title}</h2>
+              <p>{service.description}</p>
+            </div>
+          ))}
+        </Carousel>
       </div>
       {/* Sección de Por qué trabajar con nosotros */}
       <div id={menuBase[2].link.replace('/', '')} className="flex flex-col justify-center items-center relative p-4">
