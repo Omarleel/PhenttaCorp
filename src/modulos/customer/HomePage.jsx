@@ -26,7 +26,7 @@ export const HomePage = () => {
   return (
     <div className="container-page">
       {/* Sección de presentación */}
-      <div id={menuBase[0].link.replace('/', '')} className="sm:flex justify-center items-center h-auto relative mx-10">
+      <div id={menuBase[0].link.replace('/', '')} className="sm:flex justify-center items-center h-auto relative p-4">
         {/* Contenedor del Texto (Columna 2) */}
         <div className="sm:w-2/4 max-sm:w-full max-sm:my-8 text-center sm:order-2">
           {dataPresentacion &&
@@ -49,7 +49,7 @@ export const HomePage = () => {
         )}
         <div className="max-sm:hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {dataServicios['base'] && dataServicios['base'].map((service, index) => (
-            <div key={index} className="background-secondary rounded-lg shadow p-4">
+            <div key={index} className="background-secondary rounded-lg shadow p-4 text-center">
               <h2>{service.title}</h2>
               <p>{service.description}</p>
             </div>
