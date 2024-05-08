@@ -1,5 +1,5 @@
 .container-navbar {
-    @apply bg-secondary-light dark:bg-secondary-dark h-[72px] fixed top-0 w-full  z-40 p-4 flex justify-between space-x-1.5;
+    @apply bg-secondary-light dark:bg-secondary-dark h-[72px] shadow-md fixed top-0 w-full  z-40 p-4 flex justify-between space-x-1.5;
 }
 .container-logo {
     @apply w-36;

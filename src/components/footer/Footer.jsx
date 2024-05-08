@@ -80,7 +80,7 @@ export const Footer = () => {
 
             {/* Footer bottom */}
             <div className="footer-bottom mt-6 text-sm text-center">
-                <p>© 2024 {dataDerechosReservados[0].title} - <a href={`https://${dominio}`} className="text-primary font-bold hover:underline">{nombreOrganizacion}</a></p>
+                <p>© 2024 {dataDerechosReservados[0].title} - <a href={`https://${dominio}`} className="text-primary font-bold hover:underline hover-text">{nombreOrganizacion}</a></p>
             </div>
         </footer>
     );
