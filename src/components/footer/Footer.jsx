@@ -38,17 +38,17 @@ export const Footer = () => {
                         </p>
                     </React.Fragment>
                 ))}
-                    <div className="flex justify-between mt-3">
+                    <div className="flex justify-between mt-2">
                         <div className="flex items-center space-x-2">
                             <HiPhone size={sizeIcons}/>
-                            <div className="flex flex-col hover-text">
+                            <div className="flex flex-col hover-text hover:underline">
                                 <a href={`tel:51${celular}`}>(+51) {celular}</a>
                             </div>
 
                         </div>
                         <div className="flex items-center space-x-2">
                             <HiMail size={sizeIcons}/>
-                            <div className="flex flex-col hover-text">
+                            <div className="flex flex-col hover-text hover:underline">
                                 <a href={`mailto:${correo}`}>{correo}</a>
                             </div>
 
@@ -56,7 +56,7 @@ export const Footer = () => {
                     </div>
                 </div>
                 {/* Sección "Redes sociales" */}
-                <div className="flex flex-col items-center justify-center">
+                <div className="flex flex-col items-center justify-center mt-4">
                     <img className="h-9 min-w-fit" src={isDark ? rutaLogoPimarioDark : rutaLogoPimarioLight} alt="Logo" />
                     <h4 className="!mt-3 !mb-2">{dataEncontrarnos[0].title}</h4>
                     <div className="flex justify-center items-center space-x-4">
@@ -80,7 +80,7 @@ export const Footer = () => {
 
             {/* Footer bottom */}
             <div className="footer-bottom mt-6 text-sm text-center">
-                <p>© 2024 {dataDerechosReservados[0].title} - <a href={`https://${dominio}`} className="text-primary font-bold hover:underline hover-text">{nombreOrganizacion}</a></p>
+                <p>© 2024 {dataDerechosReservados[0].title} - <a href={`https://${dominio}`} className="text-primary font-bold hover-text">{nombreOrganizacion}</a></p>
             </div>
         </footer>
     );

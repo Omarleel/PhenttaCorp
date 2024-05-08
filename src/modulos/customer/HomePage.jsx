@@ -33,13 +33,13 @@ export const HomePage = () => {
   return (
     <div className="container-page">
       {/* Sección de presentación */}
-      <div id={menuBase[0].link.replace('/', '')} className="sm:flex justify-center items-center h-auto relative p-4">
+      <div id={menuBase[0].link.replace('/', '')} className="background-secondary sm:flex justify-center items-center h-auto relative p-4">
         {/* Contenedor del Texto (Columna 2) */}
         <div className="sm:w-2/4 max-sm:w-full max-sm:my-8 text-center sm:order-2">
           {dataPresentacion &&
             dataPresentacion.map((presentacion, index) => (
               <div key={index}>
-                <h1>{presentacion.title}</h1>
+                <h1 className="max-lg:text-4xl text-6xl">{presentacion.title}</h1>
                 <p>{presentacion.description}</p>
               </div>
             ))}
@@ -83,9 +83,14 @@ export const HomePage = () => {
         <div className="sm:flex justify-center items-center relative mx-10">
           <div className="sm:w-2/4 max-sm:w-full grid grid-cols-1 gap-6">
             {dataTrabajarConNosotros['base'] && dataTrabajarConNosotros['base'].map((razones, index) => (
-              <div key={index} className="background-secondary rounded-lg shadow p-4">
-                <div className="flex"><h1 className="mr-2">{index + 1}</h1><h2 className="mt-2">{razones.title}</h2></div>
-                <p>{razones.description}</p>
+              <div key={index} className="background-secondary rounded-lg shadow p-4 flex">
+                <h1 className="mr-2 mb-0 max-lg:text-6xl text-7xl">{index + 1}</h1>
+                <div className="flex flex-col">
+                  
+                  <h2 className="mt-2">{razones.title}</h2>
+                  <p className="text-left">{razones.description}</p>
+                </div>
+                
               </div>
             ))}
           </div>
