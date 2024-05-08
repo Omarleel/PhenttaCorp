@@ -22,7 +22,7 @@ export const Sidebar = () => {
         submenu.classList.add("hidden");
       }, 200);
     }
-    else{
+    else {
       submenu.classList.add("block");
     }
     if (isSidebarOpen) {
@@ -84,8 +84,8 @@ export const Sidebar = () => {
                   </button>
                   {/* Renderizar submenú */}
                   <ul id="submenu2" className={`ml-4 ${showSubmenu ? 'h-20' : 'h-0'} background-primary rounded transition-all duration-300 flex flex-col justify-center`}>
-                    {currentMenu.base.find(item => item.label === 'Idiomas' ||  item.label === 'Languages')?.items.map((idioma, index) => (
-                      <li className={`cursor-pointer ${showSubmenu ? 'pointer-events-auto' : 'pointer-events-none' }`} key={index}>
+                    {currentMenu.base.find(item => item.label === 'Idiomas' || item.label === 'Languages')?.items.map((idioma, index) => (
+                      <li className={`cursor-pointer ${showSubmenu ? 'pointer-events-auto' : 'pointer-events-none'}`} key={index}>
                         <a className={`${showSubmenu ? 'visible' : 'invisible'} menu-sidebar menu-container`} onClick={() => handleDropdown(idioma.code)}>
                           {idioma.label}
                         </a>
@@ -106,11 +106,11 @@ export const Sidebar = () => {
             </li>
           ))}
           <li className="mb-2">
-            <a href="#" onClick={handleThemeSwitch} className='ml-2 block menu-sidebar menu-container'>
-              <div className="flex items-center">
-                {isDark ? (<><HiMoon size={sizeIcons} /><span className={`ml-2 ${isSidebarOpen ? 'block' : 'hidden'}`}> Tema oscuro</span></>) : (<><HiSun size={sizeIcons} /> <span className={`ml-2 ${isSidebarOpen ? 'block' : 'hidden'}`}>Tema claro</span></>)}
-              </div>
-            </a>
+            <div className="flex items-center">
+              <button onClick={handleThemeSwitch} className='ml-2 block menu-sidebar menu-container'>
+                {isDark ? (<HiMoon size={sizeIcons} />) : (<HiSun size={sizeIcons} />)}
+              </button>
+            </div>
           </li>
         </ul>
       </nav>
