@@ -17,14 +17,14 @@ export const AboutUsPage = () => {
           <CustomAnimatedText 
           plainText="Phentta es"
           words={words}
-          className="text-4xl font-bold mb-4 text-color-primary"
+          className="text-3xl lg:text-6xl font-bold mb-4 text-color-primary"
           />
           </div>
             <img className="sm:w-2/4" src="/assets/images/aboutus/presentation.png"></img>
           </div>
         </div>
         {/* Sección Acerca de */}
-        <div>
+        <div>          
           <h1>Acerca de Phentta</h1>
           <hr />
           <p>
@@ -33,14 +33,14 @@ export const AboutUsPage = () => {
         </div>
         {/* Sección Visión/Misión */}
         <div>
-          <div className="sm:flex items-center">
+          <div className="sm:flex items-center my-4">
             <div className="sm:w-3/4 md:mx-10 order-2">
               <h1>Visión</h1>
               <p>Nos esforzamos por convertirnos en la empresa líder en tecnología a nivel mundial, abarcando diversos sectores y siendo reconocidos por nuestra innovación, calidad y compromiso con la excelencia. Estamos comprometidos a comenzar este camino con nuestro enfoque actual y expandirnos hacia nuevas fronteras en el futuro</p>
             </div>
             <img src="/assets/images/aboutus/vision.png" className="w-full order-1 sm:w-1/4"></img>
           </div>
-          <div className="sm:flex items-center">
+          <div className="sm:flex items-center my-4">
             <div className="sm:w-2/3 md:mx-10">
               <h1>Misión</h1>
               <p>En Phentta, nos dedicamos a proporcionar soluciones tecnológicas innovadoras y de alta calidad para impulsar el éxito de nuestros clientes. Nos esforzamos por ofrecer servicios personalizados y orientados a resultados, brindando atención excepcional a cada cliente y adaptándonos constantemente a las necesidades del mercado en evolución.</p>
