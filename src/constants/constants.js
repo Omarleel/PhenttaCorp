@@ -17,6 +17,7 @@ export const rutaProfilePreview = "/assets/images/profile.png"
 export const backgroundImageUrl = "/assets/images/background.jpg";
 // Otros
 export const sizeIcons = 24;
+export const sizeFloatingIcons = 24;
 // Estilo Toast
 import Swal from 'sweetalert2';
 export const Toast = Swal.mixin({

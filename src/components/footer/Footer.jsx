@@ -2,7 +2,7 @@ import React from 'react';
 import { celular, correo, dominio, nombreOrganizacion, rutaLogoPimarioDark, rutaLogoPimarioLight, sizeIcons, urlFacebook, urlInstagram, urlYoutube } from "../../constants/constants";
 import { FaFacebook, FaInstagram, FaWhatsapp, FaYoutube } from "react-icons/fa6";
 import { HiPhone, HiMail } from "react-icons/hi";
-import { detectarDispositivo } from "../../utilities/utils";
+import { getWhatsappUrl } from "../../utilities/utils";
 import { useEffect, useState } from "react";
 import { useTheme } from "../../hooks/useTheme";
 import { useLanguage } from "../../hooks/useLanguage";
@@ -16,13 +16,8 @@ export const Footer = () => {
     const dataEncontrarnos = encontrarnos.find(encontrarnos => encontrarnos.idioma === language)['base'];
     const dataDerechosReservados = derechosReservados.find(derechosReservados => derechosReservados.idioma === language)['base'];
     useEffect(() => {
-        const dispositivo = detectarDispositivo();
-        if (dispositivo === 'PC') {
-            setWhatsappShareUrl(`https://web.whatsapp.com/send/?phone=51${celular}&text=Hola ${nombreOrganizacion}, quisiera adquirir un nuevo celular.`);
-        }
-        else {
-            setWhatsappShareUrl(`https://api.whatsapp.com/send/?phone=51${celular}&text=Hola ${nombreOrganizacion}, quisiera adquirir un nuevo celular.`);
-        }
+        const urlWhatsapp = getWhatsappUrl();
+        setWhatsappShareUrl(urlWhatsapp);
     }, [])
 
     return (
@@ -41,14 +36,14 @@ export const Footer = () => {
                     <div className="flex justify-between mt-2">
                         <div className="flex items-center space-x-2">
                             <HiPhone size={sizeIcons}/>
-                            <div className="flex flex-col hover-text hover:underline">
+                            <div className="flex flex-col hover-text hover:underline max-sm:text-sm">
                                 <a href={`tel:51${celular}`}>(+51) {celular}</a>
                             </div>
 
                         </div>
                         <div className="flex items-center space-x-2">
                             <HiMail size={sizeIcons}/>
-                            <div className="flex flex-col hover-text hover:underline">
+                            <div className="flex flex-col hover-text hover:underline max-sm:text-sm">
                                 <a href={`mailto:${correo}`}>{correo}</a>
                             </div>
 

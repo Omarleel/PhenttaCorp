@@ -2,9 +2,8 @@ import { menus, presentacion, servicios, trabajarConNosotros } from "../../mocks
 import { useLanguage } from "../../hooks/useLanguage";
 import { useEffect } from "react";
 import { useLocation } from 'react-router-dom';
-import { CustomCarousel } from "../../components/CustomCarrousel";
-import { CustomSVG } from "../../components/CustomSVG";
 import { useTheme } from "../../hooks/useTheme";
+import { CustomCarousel, CustomSVG } from "../../components";
 
 export const HomePage = () => {
   const { language } = useLanguage();

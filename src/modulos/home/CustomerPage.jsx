@@ -8,6 +8,7 @@ import { menus } from '../../mocks/data';
 import { useLanguage } from '../../hooks/useLanguage';
 import { ContactUsPage } from '../customer/ContactUsPage';
 import { AboutUsPage } from '../customer/AboutUsPage';
+import { CustomWhatsappFloatingButton } from '../../components/CustomWhatsappFloatingButton';
 
 export const CustomerPage = () => {
   const { language } = useLanguage();
@@ -26,6 +27,7 @@ export const CustomerPage = () => {
           <Route path={menu.base[3].link} element={<ContactUsPage />} />
           <Route path="*" element={<Navigate to={menu.base[0].link} />} />
         </Routes>
+        <CustomWhatsappFloatingButton/>
         <Footer />
       </section>
     </div>

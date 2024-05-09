@@ -98,7 +98,7 @@ export const isRUC = (ruc) => {
 };
 
 import QRCode from 'qrcode';
-export const generateQRCode = async (link) => {
+export const generateQRCodeByLink = async (link) => {
     try {
         // Genera el código QR
         const dataURL = await QRCode.toDataURL(link);
@@ -126,5 +126,16 @@ export const detectarDispositivo = () => {
         }
     } else {
         return 'PC';
+    }
+}
+
+import { celular, nombreOrganizacion } from '../constants/constants';
+export const getWhatsappUrl = () => {
+    const dispositivo = detectarDispositivo();
+    if (dispositivo === 'PC') {
+        return `https://web.whatsapp.com/send/?phone=51${celular}&text=Hola ${nombreOrganizacion}, quisiera contratar un servicio informático.`;
+    }
+    else{
+        return `https://api.whatsapp.com/send/?phone=51${celular}&text=Hola ${nombreOrganizacion}, quisiera contratar un servicio informático.`;
     }
 }
