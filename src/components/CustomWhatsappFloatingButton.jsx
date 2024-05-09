@@ -7,7 +7,7 @@ export const CustomWhatsappFloatingButton = () => {
   return (
     <CustomFloatingActionButton
         icon={<FaWhatsapp size={sizeFloatingIcons} />}
-        className="bg-whatsapp text-white"
+        className="bg-whatsapp text-white hover:scale-105"
         position="botton right"
         onClick={ () => window.open(getWhatsappUrl(), '_blank') }
       />

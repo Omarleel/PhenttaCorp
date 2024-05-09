@@ -1,11 +1,3 @@
-export const categorias = [
-    { value: "todos", label: "Todos" },
-    { value: "smartphones", label: "Smartphones" },
-    { value: "tablets", label: "Tablets" },
-    { value: "accesorios", label: "Accesorios" },
-]
-export const dataCatalog = [];
-
 export const idiomas = [
     {
         idioma: 'Español',

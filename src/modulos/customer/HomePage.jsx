@@ -53,9 +53,10 @@ export const HomePage = () => {
         {dataServicios['titulo'] && (
           <h1>{dataServicios['titulo']}</h1>
         )}
-        <div className="max-sm:hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div className="max-sm:hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mx-10">
           {dataServicios['base'] && dataServicios['base'].map((service, index) => (
-            <div key={index} className="background-secondary rounded-lg shadow p-4 text-center">
+            <div key={index} className={`background-secondary rounded-lg shadow p-4 text-center 
+            ${( ((index+1) === (dataServicios['base'].length)) && (index) % 3 == 0 ) && 'lg:col-start-2'}`}>
               <CustomSVG svgPath={service.image} fillColor={`${isDark ? 'white' : 'black'}`} />
               <h2>{service.title}</h2>
               <p>{service.description}</p>

@@ -1,6 +1,6 @@
 import React, { useRef, useState, useEffect } from 'react';
 import { NavLink } from 'react-router-dom';
-import { HiOutlineSearch, HiOutlineGlobeAlt, HiMoon, HiSun } from 'react-icons/hi';
+import { HiOutlineGlobeAlt, HiMoon, HiSun } from 'react-icons/hi';
 import { rutaLogoPimarioDark, rutaLogoPimarioLight, sizeIcons } from '../../constants/constants';
 import './navbar.css';
 import { useTheme } from '../../hooks/useTheme';
