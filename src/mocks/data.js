@@ -186,3 +186,37 @@ export const derechosReservados = [
         ]
     },
 ];
+
+// ACERCA DE
+export const equipoPhentta = [
+    {
+        idioma: 'es',
+        base: [
+            { 
+                name: 'Jean Sanchez',
+                role: 'CEO',
+                image: '/assets/images/team/jean-sanchez.png',
+            },
+            { 
+                name: 'Cliver Flores',
+                role: 'Director de Operaciones',
+                image: '/assets/images/team/clver-flores.png',
+            },
+        ]
+    },
+    {
+        idioma: 'en',
+        base: [
+            { 
+                name: 'Jean Sanchez',
+                role: 'CEO',
+                image: '/assets/images/team/jean-sanchez.png',
+            },
+            { 
+                name: 'Cliver Flores',
+                role: 'Operations director',
+                image: '/assets/images/team/clver-flores.png',
+            },
+        ]
+    },
+]
