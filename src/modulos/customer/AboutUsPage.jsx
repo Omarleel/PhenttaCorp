@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { CustomCarousel } from "../../components";
 import { CustomAnimatedText } from "../../components/CustomAnimatedText";
 import { useLanguage } from "../../hooks";
@@ -8,6 +9,14 @@ export const AboutUsPage = () => {
   const dataAcercaDe = acercaDe.find(acercaDe => acercaDe.idioma === language).base;
   const dataEquipo = equipoPhentta.find(equipo => equipo.idioma === language);
   const dataPreguntasFrecuentes = preguntasFrecuentes.find(preguntasFrecuentes => preguntasFrecuentes.idioma === language);
+  
+  useEffect(() => {
+    window.scroll({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }, [])
+  
   return (
     <div className="container-page">
       <div className="margin-aboutus text-justify">
