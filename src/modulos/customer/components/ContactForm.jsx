@@ -45,11 +45,11 @@ export const ContactForm = () => {
         //resetFormSlide();
     }
     return (
-        <div className={`background-secondary flex max-md:flex-col items-center min-h-screen`}>
+        <div className={`background-secondary flex max-md:flex-col items-center justify-center min-h-screen`}>
             <div className="md:w-2/4 p-4 max-sm:hidden">
                 <img src="/assets/images/contact/customerSupport.svg" />
             </div>
-            <div className="md:w-2/4 text-center mx-4 md:mx-8 my-auto">
+            <div className="md:w-2/4 text-center mx-4 md:mx-8 my-8">
                 <h1>{dataContactanosFormulario.titulo}</h1>
                 <h2>{dataContactanosFormulario.base[0].title}</h2>
                 <p>{dataContactanosFormulario.base[0].description}</p>
