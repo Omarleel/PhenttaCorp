@@ -6,13 +6,13 @@ import { getWhatsappUrl } from "../../utilities/utils";
 import { useEffect, useState } from "react";
 import { useTheme } from "../../hooks/useTheme";
 import { useLanguage } from "../../hooks/useLanguage";
-import { contactanos, derechosReservados, encontrarnos } from "../../mocks/data";
+import { contactanosFooter, derechosReservados, encontrarnos } from "../../mocks/data";
 
 export const Footer = () => {
     const { language } = useLanguage();
     const { isDark } = useTheme();
     const [whatsappShareUrl, setWhatsappShareUrl] = useState("");
-    const dataContactanos = contactanos.find(contactanos => contactanos.idioma === language)['base'];
+    const dataContactanosFooter = contactanosFooter.find(contactanos => contactanos.idioma === language)['base'];
     const dataEncontrarnos = encontrarnos.find(encontrarnos => encontrarnos.idioma === language)['base'];
     const dataDerechosReservados = derechosReservados.find(derechosReservados => derechosReservados.idioma === language)['base'];
     useEffect(() => {
@@ -25,7 +25,7 @@ export const Footer = () => {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
                 {/* Sección "Quiénes somos" */}
                 <div>
-                {dataContactanos && dataContactanos.map((contactanos, index) => (
+                {dataContactanosFooter && dataContactanosFooter.map((contactanos, index) => (
                     <React.Fragment key={index}>
                         <h3 className="mb-3">{contactanos.title} </h3>
                         <p className="text-center">

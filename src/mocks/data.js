@@ -142,7 +142,7 @@ export const trabajarConNosotros = [
         ]
     },
 ];
-export const contactanos = [
+export const contactanosFooter = [
     {
         idioma: "es",
         base: [
@@ -317,6 +317,100 @@ export const preguntasFrecuentes = [
                 title: "What are your future plans?",
                 description: "We are committed to the continued growth and expansion of our company. We plan to continue innovating in the field of technology and expand our service offering to meet the emerging needs of our clients. In addition, we seek to establish strategic alliances and collaborations with others companies and organizations to further boost our growth and contribute to the development of the technology sector in general."
             },
+        ]
+    },
+];
+
+export const contactanos = [
+    {
+        idioma: "es",
+        titulo: "¡Hola!",
+        base: [
+            { 
+                title: "Por favor, ayúdanos a entender mejor tu perfil como cliente.",
+                description: "Selecciona si representas a una empresa o eres un cliente particular haciendo clic en una de las opciones a continuación.",
+            },
+            { 
+                btnPrimary: "Soy una empresa",
+                btnSecondary: "Cliente particular",
+            },
+        ]
+    },
+    {
+        idioma: "en",
+        titulo: "Hi!",
+        base: [
+            {
+                title: "Please help us better understand your customer profile.",
+                description: "Select whether you represent a company or are an individual client by clicking on one of the options below.",
+            },
+            {
+                btnPrimary: "I am a company",
+                btnSecondary: "Private customer",
+            },
+        ]
+    }
+];
+
+export const contactanosFormulario = [
+    {
+        idioma: "es",
+        titulo: "¡Hola!",
+        base: [
+            { 
+                title: "¡Nos encantaría conocerte mejor! ",
+                description: "Por favor, completa este formulario para que podamos ponernos en contacto contigo directamente.",
+            },
+            { 
+                firstName: "Nombre",
+                lastName: "Apellidos",
+                email: "Correo electrónico",
+                countryCode: 'Código de país',
+                phone: "Celular de contacto",
+                service: "Servicio",
+                services: servicios[0].base.map((servicio) => servicio.title),
+                button: "Enviar",
+            },
+        ]
+    },
+    {
+        idioma: "en",
+        titulo: "Hi!",
+        base: [
+            {
+                title: "We would love to get to know you better!",
+                description: "Please complete this form so we can contact you directly.",
+            },
+            {
+                firstName: "First name",
+                lastName: "Last name",
+                email: "Email",
+                countryCode: 'Coundry code',
+                phone: "Phone number",
+                service: "Service",
+                services: servicios[1].base.map((servicio) => servicio.title),
+                button: "Send",
+            },
+        ]
+    }
+];
+
+
+export const mensajesAlerta = [
+    {
+        idioma: "es",
+        base: [
+            {
+                invalidEmail: "Por favor, ingrese un correo electrónico válido."
+            }
+        ]
+    },
+    {
+        idioma: "en",
+        base: [
+            {
+                invalidEmail: "Please, enter a valid email address."
+            }
         ]
     },
 ];
