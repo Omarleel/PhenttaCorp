@@ -10,10 +10,11 @@ import { useLanguage } from '../../hooks/useLanguage';
 import { menus } from '../../mocks/data';
 export const Sidebar = () => {
   const { setPreferredLanguage, language } = useLanguage();
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [showSubmenu, setShowSubmenu] = useState(false);
   const status = "none"; // Define el estado de autenticación
   const { isDark, handleThemeSwitch } = useTheme(); // Tema y función de cambio de tema
-  const [isSidebarOpen, setIsSidebarOpen] = useState(false); // Estado para controlar la apertura/cierre del sidebar
+  
 
   const toggleSidebar = () => {
     const submenu = document.getElementById("submenu2");
@@ -31,6 +32,7 @@ export const Sidebar = () => {
     setIsSidebarOpen(!isSidebarOpen);
   };
   const handleDropdown = (code) => {
+    setShowSubmenu(false);
     setIsSidebarOpen(false);
     setPreferredLanguage(code);
   };
@@ -49,7 +51,7 @@ export const Sidebar = () => {
   };
 
   // Obtener el menú correspondiente al idioma actual seleccionado
-  const currentMenu = menus.find(menu => menu.idioma === language); // Puedes cambiar 'es' por el idioma actual seleccionado
+  const currentMenu = menus.find(menu => menu.idioma === language);
 
   return (
     <aside className="container-sidebar">

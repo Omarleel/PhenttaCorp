@@ -31,7 +31,7 @@ export const CustomAnimatedText = ({ plainText = '', words = [], className = '' 
             {words.map((word, index) => (
                 <span
                     key={index}
-                    className={`py-2 animate-pulse transition-opacity duration-500 ${index === currentWordIndex ? 'block' : 'hidden'
+                    className={`pt-1 pb-2 animate-pulse transition-opacity duration-500 ${index === currentWordIndex ? 'block' : 'hidden'
                         } ${colors[index % colors.length]}`} // Asigna un color único basado en el índice
                 >
                     {word}

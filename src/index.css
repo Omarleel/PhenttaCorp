@@ -104,7 +104,9 @@ h4 {
 h5 {
     @apply text-sm mb-4 text-color-primary !m-0;
 }
-
+hr {
+    @apply w-full border-[#A8A8A8] dark:border-white;
+}
 .margin-aboutus {
     @apply mx-10 py-4 md:mx-36;
 }
