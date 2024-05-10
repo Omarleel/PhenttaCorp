@@ -295,7 +295,7 @@ export const preguntasFrecuentes = [
             },
             { 
                 title: "¿Están contratando personal en este momento?",
-                description: "Siempre estamos buscando talento excepcional para unirse a nuestro equipo. Si estás interesado en formar parte de una empresa innovadora y apasionada por la tecnología, te animamos a que revises nuestras oportunidades laborales actuales en nuestra página de Carreras. " 
+                description: "Siempre estamos buscando talento excepcional para unirse a nuestro equipo. Si estás interesado en formar parte de una empresa innovadora y apasionada por la tecnología, te animamos a que revises nuestras oportunidades laborales actuales en nuestra página de empleos. " 
             },
             { 
                 title: "¿Cuáles son sus planes a futuro?",
@@ -321,7 +321,7 @@ export const preguntasFrecuentes = [
             },
             {
                 title: "Are you hiring right now?",
-                description: "We are always looking for exceptional talent to join our team. If you are interested in joining an innovative company passionate about technology, we encourage you to review our current job opportunities on our Careers page."
+                description: "We are always looking for exceptional talent to join our team. If you are interested in joining an innovative company passionate about technology, we encourage you to review our current job opportunities on our jobs page."
             },
             {
                 title: "What are your future plans?",
@@ -377,6 +377,8 @@ export const contactanosFormulario = [
                 email: "Correo electrónico",
                 countryCode: 'Código de país',
                 phone: "Celular de contacto",
+                companyName: 'Nombre de empresa',
+                role: 'Cargo',
                 service: "Servicio",
                 services: servicios[0].base.map((servicio) => servicio.title),
                 button: "Enviar",
@@ -397,6 +399,8 @@ export const contactanosFormulario = [
                 email: "Email",
                 countryCode: 'Coundry code',
                 phone: "Phone number",
+                companyName: 'Company name',
+                role: 'Role',
                 service: "Service",
                 services: servicios[1].base.map((servicio) => servicio.title),
                 button: "Send",
@@ -404,7 +408,6 @@ export const contactanosFormulario = [
         ]
     }
 ];
-
 
 export const mensajesAlerta = [
     {
@@ -422,5 +425,70 @@ export const mensajesAlerta = [
                 invalidEmail: "Please, enter a valid email address."
             }
         ]
+    },
+];
+
+export const cargos = [
+    {
+        idioma: "es",
+        base: [
+            "CEO (Director Ejecutivo)",
+            "CFO (Director Financiero)",
+            "COO (Director de Operaciones)",
+            "CTO (Director de Tecnología)",
+            "CMO (Director de Marketing)",
+            "CIO (Director de Información)",
+            "CHRO (Director de Recursos Humanos)",
+            "CRO (Director de Relaciones con el Cliente)",
+            "Director Comercial",
+            "Director de Ventas",
+            "Gerente General",
+            "Gerente de Recursos Humanos",
+            "Gerente de Finanzas",
+            "Gerente de Marketing",
+            "Gerente de Operaciones",
+            "Gerente de Tecnología",
+            "Gerente de Proyectos",
+            "Jefe de Desarrollo de Producto",
+            "Jefe de Compras",
+            "Controller Financiero",
+            "Analista de Negocios",
+            "Especialista en Recursos Humanos",
+            "Especialista en Marketing Digital",
+            "Especialista en Sistemas",
+            "Asistente Ejecutivo",
+            "Secretaria de Dirección"
+        ]
+    },
+    {
+        idioma: "en",
+        base: [
+            "CEO (Executive Director)",
+            "CFO (Chief Financial Officer)",
+            "COO (Director of Operations)",
+            "CTO (Chief Technology Officer)",
+            "CMO (Chief Marketing Officer)",
+            "CIO (Chief Information Officer)",
+            "CHRO (Director of Human Resources)",
+            "CRO (Customer Relations Director)",
+            "Commercial Director",
+            "Sales manager",
+            "General manager",
+            "Human resources manager",
+            "Finance manager",
+            "Marketing manager",
+            "COO",
+            "Technology Manager",
+            "Project manager",
+            "Head of Product Development",
+            "Purchasing Manager",
+            "Financial controller",
+            "Business Analyst",
+            "Human Resources Specialist",
+            "Digital Marketing Specialist",
+            "Systems Specialist",
+            "Executive assistant",
+            "Secretary of direction"
+       ]
     },
 ];

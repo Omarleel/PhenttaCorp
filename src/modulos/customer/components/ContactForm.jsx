@@ -1,5 +1,5 @@
 import React from 'react'
-import { contactanosFormulario, mensajesAlerta } from '../../../mocks/data';
+import { cargos, contactanosFormulario, mensajesAlerta } from '../../../mocks/data';
 import { useConnection, useForm, useLanguage } from '../../../hooks';
 import { countryCodes } from '../../../mocks/countryCodes';
 import { useFormSlide } from '../../../hooks/useFormSlide';
@@ -10,18 +10,22 @@ const formFields = {
     email: '',
     codigoPais: '',
     celular: '',
+    empresa: '',
+    cargo: '',
     servicio: '',
 }
 export const ContactForm = () => {
     const { language } = useLanguage();
     const { isLoading } = useConnection();
-    const { setData, resetFormSlide } = useFormSlide();
+    const { setData, resetFormSlide, getFormData } = useFormSlide();
     const {
         nombres,
         apellidos,
         email,
         codigoPais,
         celular,
+        empresa,
+        cargo,
         servicio,
         onInputChange,
         onInputBlur,
@@ -32,6 +36,8 @@ export const ContactForm = () => {
     } = useForm(formFields)
     const dataContactanosFormulario = contactanosFormulario.find(contactanosFormulario => contactanosFormulario.idioma === language);
     const dataMensajesAlerta = mensajesAlerta.find(mensajeAlerta => mensajeAlerta.idioma === language);
+    const dataCargos = cargos.find(cargo => cargo.idioma === language);
+    
     const onSubmit = (event) => {
         event.preventDefault();
         console.log('Form enviado', formState);
@@ -142,6 +148,50 @@ export const ContactForm = () => {
                                 />
                             </div>
                         </div>
+                        { (getFormData && getFormData.tipoCliente === 'Empresa') && (
+                            <>
+                            <div>
+                                <label htmlFor="empresa" className="primary-label">
+                                    {dataContactanosFormulario.base[1].companyName}
+                                </label>
+                                <div>
+                                    <input
+                                        id="empresa"
+                                        type="empresa"
+                                        name="empresa"
+                                        autoComplete="false"
+                                        placeholder=""
+                                        className="primary-input p-2 w-full"
+                                        value={empresa}
+                                        onChange={onInputChange}
+                                        required
+                                    />
+                                </div>
+                            </div>
+                            <div>
+                            <label htmlFor="cargo" className="primary-label">
+                                    {dataContactanosFormulario.base[1].role}
+                                </label>
+                            <select
+                                id="cargo"
+                                name="cargo"
+                                className="primary-input p-2 w-full"
+                                value={cargo}
+                                onChange={onInputChange}
+                                required
+                            >
+                                {
+                                    dataCargos && dataCargos.base.map((cargo) => (
+                                        <option key={cargo} value={cargo}>
+                                            {cargo}
+                                        </option>
+                                    ))}
+                            </select>
+                            </div>
+                            </>
+                            
+                            
+                        ) }
                         <div>
                             <label htmlFor="servicio" className="primary-label">
                                 {dataContactanosFormulario.base[1].service}
