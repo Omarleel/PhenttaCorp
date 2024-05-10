@@ -37,7 +37,7 @@ export const AboutUsPage = () => {
         <div className="py-4">
           <h1>{dataAcercaDe[1].title}</h1>
           <hr />
-          <p>
+          <p className="mt-4">
             {dataAcercaDe[1].description}
           </p>
         </div>
@@ -62,7 +62,7 @@ export const AboutUsPage = () => {
         <div className="py-4">
           <h1>Equipo de Phentta</h1>
           <hr />
-          <div className="max-sm:hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 pt-4">
+          <div className="max-sm:hidden grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
             {dataEquipo['base'] && dataEquipo['base'].map((equipo, index) => (
               <div key={index} className={`background-secondary rounded-lg shadow p-4 text-center 
               ${(((index + 1) === (dataEquipo['base'].length)) && (index) % 3 == 0) && 'lg:col-start-2'}`}>
@@ -75,7 +75,7 @@ export const AboutUsPage = () => {
           <div className="sm:hidden max-sm:block rounded my-4">
             <CustomCarousel>
               {dataEquipo['base'] && dataEquipo['base'].map((equipo, index) => (
-                <div key={index} className="background-secondary rounded-lg shadow px-8 pt-4 pb-10 text-center">
+                <div key={index} className="background-secondary rounded-lg shadow px-8 mt-4 pb-10 text-center">
                   <img src={equipo.image} className="w-2/4 mx-auto" />
                   <h2>{equipo.name}</h2>
                   <p>{equipo.role}</p>
@@ -92,7 +92,7 @@ export const AboutUsPage = () => {
             {
               dataPreguntasFrecuentes['base'] && dataPreguntasFrecuentes['base'].map((preguntasFrecuentes, index) => (
                 <div key={index} className="my-2">
-                  <h2 className="mt-3 mb-1">{index + 1}. {preguntasFrecuentes.title}</h2>
+                  <h2 className="mt-4 mb-1">{index + 1}. {preguntasFrecuentes.title}</h2>
                   <p>{preguntasFrecuentes.description}</p>
                 </div>
               ))
