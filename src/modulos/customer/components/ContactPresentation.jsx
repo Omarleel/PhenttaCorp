@@ -16,7 +16,7 @@ export const ContactPresentation = () => {
             <div className="md:w-2/4 p-4 max-sm:hidden">
                 <img src="/assets/images/contact/presentation.svg" />
             </div>
-            <div className="md:w-2/4 text-center m-12 my-auto ">
+            <div className="md:w-2/4 text-center mx-4 md:mx-8 my-auto">
                 <h1>{dataContactanos.titulo}</h1>
                 <h2>{dataContactanos.base[0].title}</h2>
                 <p>{dataContactanos.base[0].description}</p>

@@ -49,7 +49,7 @@ export const ContactForm = () => {
             <div className="md:w-2/4 p-4 max-sm:hidden">
                 <img src="/assets/images/contact/customerSupport.svg" />
             </div>
-            <div className="md:w-2/4 text-center m-8 md:m-12 py-4">
+            <div className="md:w-2/4 text-center mx-4 md:mx-8 my-auto">
                 <h1>{dataContactanosFormulario.titulo}</h1>
                 <h2>{dataContactanosFormulario.base[0].title}</h2>
                 <p>{dataContactanosFormulario.base[0].description}</p>
