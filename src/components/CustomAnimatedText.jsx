@@ -2,11 +2,11 @@ import React, { useState, useEffect } from 'react';
 
 // Colores disponibles para las palabras
 const colors = [
-    'bg-clip-text text-transparent bg-gradient-to-r from-gray-400 via-gray-200 to-gray-400',
-    'bg-clip-text text-transparent bg-gradient-to-r from-fuchsia-400 via-fuchsia-200 to-fuchsia-400',
-    'bg-clip-text text-transparent bg-gradient-to-r from-yellow-400 via-yellow-200 to-yellow-400',
-    'bg-clip-text text-transparent bg-gradient-to-r from-green-400 via-green-200 to-green-400',
-    'bg-clip-text text-transparent bg-gradient-to-r from-blue-400 via-blue-200 to-blue-400', 
+    'bg-clip-text text-transparent bg-gradient-to-r from-[#CF0000] to-[#CF0000] dark:from-gray-400 dark:via-gray-200 dark:to-gray-400',
+    'bg-clip-text text-transparent bg-gradient-to-r from-[#F12711] to-[#F5AF19] dark:from-fuchsia-400 dark:via-fuchsia-200 dark:to-fuchsia-400',
+    'bg-clip-text text-transparent bg-gradient-to-r from-[#cc2b5e] to-[#753a88] dark:from-yellow-400 dark:via-yellow-200 dark:to-yellow-400',
+    'bg-clip-text text-transparent bg-gradient-to-r from-[#C31432] to-[#240B36] dark:from-green-400 dark:via-green-200 dark:to-green-400',
+    'bg-clip-text text-transparent bg-gradient-to-r from-[#EE0979] to-[#FF6A00] dark:from-blue-400 dark:via-blue-200 dark:to-blue-400', 
     'bg-clip-text text-transparent bg-gradient-to-r from-purple-400 via-purple-200 to-purple-400',
     'bg-clip-text text-transparent bg-gradient-to-r from-pink-400 via-pink-200 to-pink-400',
 ];

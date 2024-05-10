@@ -10,7 +10,7 @@ export const AboutUsPage = () => {
   const dataPreguntasFrecuentes = preguntasFrecuentes.find(preguntasFrecuentes => preguntasFrecuentes.idioma === language);
   return (
     <div className="container-page">
-      <div className="margin-aboutus">
+      <div className="margin-aboutus text-justify">
         {/* Sección presentación */}
         <div>
           <div className="sm:flex items-center background-secondary p-4">
@@ -25,7 +25,7 @@ export const AboutUsPage = () => {
           </div>
         </div>
         {/* Sección Acerca de */}
-        <div className="py-4 text-justify">
+        <div className="py-4">
           <h1>{dataAcercaDe[1].title}</h1>
           <hr />
           <p>
@@ -76,19 +76,19 @@ export const AboutUsPage = () => {
           </div>
         </div>
         {/* Sección Preguntas frecuentes */}
-        <div className="py-4">
+        <div className="p-4 background-secondary">
           <h1>{dataPreguntasFrecuentes.titulo}</h1>
           <hr />
           <div className="flex flex-col">
-          {
-            dataPreguntasFrecuentes['base'] && dataPreguntasFrecuentes['base'].map((preguntasFrecuentes, index) => (
-             <div key={index} className="my-2">
-               <h2>{preguntasFrecuentes.title}</h2>
-                <p>{preguntasFrecuentes.description}</p>
-             </div>
-            ))
-          }
-              
+            {
+              dataPreguntasFrecuentes['base'] && dataPreguntasFrecuentes['base'].map((preguntasFrecuentes, index) => (
+                <div key={index} className="my-2">
+                  <h2 className="mt-3 mb-1">{index + 1}. {preguntasFrecuentes.title}</h2>
+                  <p>{preguntasFrecuentes.description}</p>
+                </div>
+              ))
+            }
+
           </div>
         </div>
       </div>
