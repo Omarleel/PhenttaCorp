@@ -2,9 +2,9 @@ import React from 'react'
 import { contactanosFormulario, mensajesAlerta } from '../../../mocks/data';
 import { useConnection, useForm, useLanguage } from '../../../hooks';
 import { countryCodes } from '../../../mocks/countryCodes';
+import { useFormSlide } from '../../../hooks/useFormSlide';
 
 const formFields = {
-    tipoCliente: '',
     nombres: '',
     apellidos: '',
     email: '',
@@ -15,8 +15,8 @@ const formFields = {
 export const ContactForm = () => {
     const { language } = useLanguage();
     const { isLoading } = useConnection();
+    const { setData, resetFormSlide } = useFormSlide();
     const {
-        tipoCliente,
         nombres,
         apellidos,
         email,
@@ -35,10 +35,12 @@ export const ContactForm = () => {
     const onSubmit = (event) => {
         event.preventDefault();
         console.log('Form enviado', formState);
+        setData(formState);
+        //resetFormSlide();
     }
     return (
         <div className={`background-secondary flex max-md:flex-col items-center h-screen`}>
-            <div className="md:w-2/4 max-sm:hidden">
+            <div className="md:w-2/4 p-4 max-sm:hidden">
                 <img src="/assets/images/contact/customerSupport.svg" />
             </div>
             <div className="md:w-2/4 text-center m-12 my-auto ">

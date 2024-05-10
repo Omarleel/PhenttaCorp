@@ -1,5 +1,5 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { authSlice, themeSlice, languageSlice, connectionSlice, modalSlice, favoriteSlice, shoppingCartSlice, orderSlice, tableSlice } from "./";
+import { authSlice, themeSlice, languageSlice, connectionSlice, modalSlice, favoriteSlice, shoppingCartSlice, orderSlice, tableSlice, formSlideSlice } from "./";
 
 export const store = configureStore({
     reducer: {
@@ -9,6 +9,7 @@ export const store = configureStore({
         connection: connectionSlice.reducer,
         modal: modalSlice.reducer,
         favorite: favoriteSlice.reducer,
+        formSlide: formSlideSlice.reducer,
         shoppingCart: shoppingCartSlice.reducer,
         order: orderSlice.reducer,
         tables: tableSlice.reducer,

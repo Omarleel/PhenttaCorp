@@ -1,10 +1,15 @@
-import React, { useState } from 'react';
 import { HiChevronLeft, HiChevronRight  } from "react-icons/hi";
 import { sizeIcons } from '../constants/constants';
+import { useFormSlide } from '../hooks/useFormSlide';
+import { useEffect } from "react";
 
 export const CustomFormSlide = ({ steps }) => {
-    const [currentStep, setCurrentStep] = useState(0);
-
+    const {setFormCurrentStep: setCurrentStep, getFormCurrentState: currentStep, getFormData} = useFormSlide();
+    
+    useEffect(() => {
+        setCurrentStep(0);
+    }, [])
+    
     const nextStep = () => {
         setCurrentStep(currentStep + 1);
     };
@@ -12,11 +17,11 @@ export const CustomFormSlide = ({ steps }) => {
     const prevStep = () => {
         setCurrentStep(currentStep - 1);
     };
-
     return (
         <div className="mx-auto relative">
             {/* Botones de navegación entre pasos */}
-            <div className="flex justify-between mt-4 absolute w-full">
+            { (getFormData && Object.keys(getFormData).length > 0) && (
+                <div className="flex justify-between mt-4 absolute w-full">
                 {currentStep > 0 && (
                     <button className="p-4 absolute left-0" onClick={prevStep}>
                         <HiChevronLeft size={sizeIcons} />
@@ -28,6 +33,8 @@ export const CustomFormSlide = ({ steps }) => {
                     </button>
                 )}
             </div>
+            )}
+            
 
             {/* Renderizar el componente del paso actual */}
             {steps[currentStep]}

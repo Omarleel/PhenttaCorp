@@ -2,6 +2,7 @@ export * from './theme/themeSlice';
 export * from './language/languageSlice';
 export * from './auth/authSlice';
 export * from './connection/connectionSlice';
+export * from './formSlide/formSlideSlice';
 export * from './modal/modalSlice';
 export * from './favorite/favoriteSlice';
 export * from './shopping/shoppingCartSlice';
