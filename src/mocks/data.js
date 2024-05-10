@@ -247,6 +247,11 @@ export const equipoPhentta = [
                 role: "Director de Operaciones",
                 image: "/assets/images/team/profile.png",
             },
+            { 
+                name: "Albert Lopez",
+                role: "Analista de Software",
+                image: "/assets/images/team/profile.png",
+            },
         ]
     },
     {
@@ -259,7 +264,12 @@ export const equipoPhentta = [
             },
             { 
                 name: "Cliver Flores",
-                role: "Operations director",
+                role: "Operations Director",
+                image: "/assets/images/team/profile.png",
+            },
+            { 
+                name: "Albert Lopez",
+                role: "Software Analyst",
                 image: "/assets/images/team/profile.png",
             },
         ]
