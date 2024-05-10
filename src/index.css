@@ -108,7 +108,7 @@ hr {
     @apply w-full border-[#A8A8A8] dark:border-white;
 }
 .margin-aboutus {
-    @apply mx-10 py-4 md:mx-36;
+    @apply mx-4 py-4 md:mx-36;
 }
 .hover-text {
     @apply hover:text-color-hover dark:hover:text-color-hover-dark;

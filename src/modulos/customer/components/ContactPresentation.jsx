@@ -12,7 +12,7 @@ export const ContactPresentation = () => {
     }
     
     return (
-        <div className={`background-secondary flex max-md:flex-col items-center h-screen`}>
+        <div className={`background-secondary flex max-md:flex-col items-center min-h-screen`}>
             <div className="md:w-2/4 p-4 max-sm:hidden">
                 <img src="/assets/images/contact/presentation.svg" />
             </div>
