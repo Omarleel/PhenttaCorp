@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from "react";
 import { HiOutlineChevronLeft, HiOutlineChevronRight } from "react-icons/hi";
 
-export const CustomCarousel = ({ children, autoPlay = true, emulateTouch = true, interval = 3000 }) => {
+export const CustomCarousel = ({ children, autoPlay = true, emulateTouch = true, interval = 8000 }) => {
     const [currentIndex, setCurrentIndex] = useState(0);
     const [isDragging, setIsDragging] = useState(false);
     const [startX, setStartX] = useState(0);

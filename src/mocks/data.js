@@ -355,7 +355,7 @@ export const contactanos = [
                 description: "Select whether you represent a company or are an individual client by clicking on one of the options below.",
             },
             {
-                btnPrimary: "I am a company",
+                btnPrimary: "I own a company",
                 btnSecondary: "Private customer",
             },
         ]

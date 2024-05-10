@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { HiOutlineMenu, HiX, HiOutlineHome, HiOutlineDeviceMobile, HiOutlineMap, HiOutlineUser, HiOutlineCog, HiOutlineHeart, HiSun, HiMoon, HiOutlineLogout } from 'react-icons/hi';
+import { HiOutlineMenu, HiX, HiSun, HiMoon } from 'react-icons/hi';
 import { NavLink } from 'react-router-dom';
 import { useTheme } from '../../hooks/useTheme';
 import './sidebar.css'
@@ -8,13 +8,13 @@ import { customClass } from '../../constants/colors';
 import { sizeIcons } from '../../constants/constants';
 import { useLanguage } from '../../hooks/useLanguage';
 import { menus } from '../../mocks/data';
-export const Sidebar = () => {
+export const Sidebar = ({ backgroundLocked = false }) => {
   const { setPreferredLanguage, language } = useLanguage();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
   const [showSubmenu, setShowSubmenu] = useState(false);
   const status = "none"; // Define el estado de autenticación
   const { isDark, handleThemeSwitch } = useTheme(); // Tema y función de cambio de tema
-  
+
 
   const toggleSidebar = () => {
     const submenu = document.getElementById("submenu2");
@@ -67,7 +67,12 @@ export const Sidebar = () => {
           )}
         </button>
       </div>
-      <nav className={`background-secondary container-menu-sidebar ${isSidebarOpen ? 'max-sm:left-0' : 'max-sm:left-[-250px] sm:w-20'}`}>
+      <div
+        className={`fixed mt-[72px] z-10 w-full h-screen bg-black opacity-50 ${isSidebarOpen ? 'block' : 'hidden'}`}
+        onClick={backgroundLocked === false ? toggleSidebar : undefined}
+      >
+      </div>
+      <nav className={`background-secondary z-50 container-menu-sidebar ${isSidebarOpen ? 'max-sm:left-0' : 'max-sm:left-[-250px] sm:w-20'}`}>
         <ul className="p-4">
           {/* Renderizar elementos del menú */}
           {currentMenu.base.map((menuItem, index) => (

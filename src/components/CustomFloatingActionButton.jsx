@@ -30,7 +30,7 @@ export const CustomFloatingActionButton = ({ icon, className, position, onClick 
 
   return (
     <div
-      className={`fixed ${verticalPositionClass} ${horizontalPositionClass} z-50 w-14 h-14 rounded-full flex items-center justify-center shadow-lg cursor-pointer ${className}`}
+      className={`fixed ${verticalPositionClass} ${horizontalPositionClass} z-20 w-14 h-14 rounded-full flex items-center justify-center shadow-lg cursor-pointer ${className}`}
       onClick={onClick}
     >
       {icon}
