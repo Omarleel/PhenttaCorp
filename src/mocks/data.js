@@ -194,7 +194,7 @@ export const acercaDe = [
         base: [
             { 
                 title: "Phentta es",
-                words: ["tecnología", "innovación", "excelencia", "crecimiento empresarial", "soluciones digitales"],
+                words: ["tecnología", "innovación", "excelencia", "crecimiento", "soluciones"],
             },
             { 
                 title: "Acerca de Phentta",
@@ -215,7 +215,7 @@ export const acercaDe = [
         base: [
             { 
                 title: "Phentta is",
-                words: ["technology", "innovation", "excellence", "business growth", "digital solutions"],
+                words: ["technology", "innovation", "excellence", "growth", "solutions"],
             },
             { 
                 title: "About Phentta",
@@ -264,4 +264,25 @@ export const equipoPhentta = [
             },
         ]
     },
-]
+];
+
+export const preguntasFrecuentes = [
+    {
+        idioma: "es",
+        titulo: "Preguntas frecuentes ",
+        base: [
+            { title: "Experiencia Especializada", description: "Contamos con un equipo experto en una amplia gama de servicios tecnológicos para impulsar el éxito de tu negocio en línea." },
+            { title: "Innovación Constante", description: "Diseñamos soluciones digitales alineando los objetivos de tu Pyme y tus necesidades como cliente." },
+            { title: "Atención Personalizada", description: "Te brindamos un servicio individualizado para entender y satisfacer tus necesidades tecnológicas específicas." },
+        ]
+    },
+    {
+        idioma: "en",
+        titulo: "Why should you join us?",
+        base: [
+            { title: "Specialized Experience", description: "We have a team of experts in a wide range of technological services to boost the success of your online business." },
+            { title: "Constant Innovation", description: "We design digital solutions aligning the objectives of your SME and your needs as a client." },
+            { title: "Personalized Attention", description: "We provide you with individualized service to understand and meet your specific technological needs." },
+        ]
+    },
+];
