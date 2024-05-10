@@ -269,20 +269,54 @@ export const equipoPhentta = [
 export const preguntasFrecuentes = [
     {
         idioma: "es",
-        titulo: "Preguntas frecuentes ",
+        titulo: "Preguntas frecuentes",
         base: [
-            { title: "Experiencia Especializada", description: "Contamos con un equipo experto en una amplia gama de servicios tecnológicos para impulsar el éxito de tu negocio en línea." },
-            { title: "Innovación Constante", description: "Diseñamos soluciones digitales alineando los objetivos de tu Pyme y tus necesidades como cliente." },
-            { title: "Atención Personalizada", description: "Te brindamos un servicio individualizado para entender y satisfacer tus necesidades tecnológicas específicas." },
+            { 
+                title: "¿Cómo puedo comenzar a trabajar con ustedes?",
+                description: "Es fácil comenzar a trabajar con nosotros. Simplemente contáctanos a través de nuestro formulario de contacto en línea o envíanos un correo electrónico acontacto@phentta.com  Uno de nuestros representantes se pondrá en contacto contigo para discutir tus necesidades y cómo podemos ayudarte" 
+            },
+            { 
+                title: "¿Cuál es su enfoque en cuanto a la atención al cliente?",
+                description: "Nuestro enfoque es proporcionar un servicio excepcional y una atención personalizada en cada paso del camino." 
+            },
+            { 
+                title: "¿Ofrecen servicios personalizados?",
+                description: "Sí, nos enorgullecemos de ofrecer servicios personalizados para satisfacer las necesidades únicas de cada cliente." 
+            },
+            { 
+                title: "¿Están contratando personal en este momento?",
+                description: "Siempre estamos buscando talento excepcional para unirse a nuestro equipo. Si estás interesado en formar parte de una empresa innovadora y apasionada por la tecnología, te animamos a que revises nuestras oportunidades laborales actuales en nuestra página de Carreras. " 
+            },
+            { 
+                title: "¿Cuáles son sus planes a futuro?",
+                description: "Estamos comprometidos con el crecimiento y la expansión continua de nuestra empresa. Planeamos seguir innovando en el campo de la tecnología y ampliar nuestra oferta de servicios para satisfacer las necesidades emergentes de nuestros clientes. Además, buscamos establecer alianzas estratégicas y colaboraciones con otras empresas y organizaciones para impulsar aún más nuestro crecimiento y contribuir al desarrollo del sector tecnológico en general." 
+            },
         ]
     },
     {
         idioma: "en",
-        titulo: "Why should you join us?",
+        titulo: "Frequent questions",
         base: [
-            { title: "Specialized Experience", description: "We have a team of experts in a wide range of technological services to boost the success of your online business." },
-            { title: "Constant Innovation", description: "We design digital solutions aligning the objectives of your SME and your needs as a client." },
-            { title: "Personalized Attention", description: "We provide you with individualized service to understand and meet your specific technological needs." },
+            {
+                title: "How can I start working with you?",
+                description: "It's easy to start working with us. Simply contact us through our online contact form or email us at contacto@phentta.com One of our representatives will contact you to discuss your needs and how we can help you"
+            },
+            {
+                title: "What is your approach to customer service?",
+                description: "Our focus is to provide exceptional service and personalized attention every step of the way."
+            },
+            {
+                title: "Do you offer personalized services?",
+                description: "Yes, we pride ourselves on offering personalized services to meet the unique needs of each client."
+            },
+            {
+                title: "Are you hiring right now?",
+                description: "We are always looking for exceptional talent to join our team. If you are interested in joining an innovative company passionate about technology, we encourage you to review our current job opportunities on our Careers page."
+            },
+            {
+                title: "What are your future plans?",
+                description: "We are committed to the continued growth and expansion of our company. We plan to continue innovating in the field of technology and expand our service offering to meet the emerging needs of our clients. In addition, we seek to establish strategic alliances and collaborations with others companies and organizations to further boost our growth and contribute to the development of the technology sector in general."
+            },
         ]
     },
 ];
