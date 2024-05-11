@@ -22,7 +22,7 @@ export const AboutUsPage = () => {
       <div className="margin-aboutus text-justify">
         {/* Sección presentación */}
         <div>
-          <div className="sm:flex items-center p-4">
+          <div className="sm:flex items-center py-4">
             <div className="sm:w-2/4">
               <CustomAnimatedText
                 plainText={dataAcercaDe[0].title}
