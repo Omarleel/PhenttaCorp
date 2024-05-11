@@ -2,21 +2,22 @@ import { useEffect } from "react";
 import { CustomCarousel } from "../../components";
 import { CustomAnimatedText } from "../../components/CustomAnimatedText";
 import { useLanguage } from "../../hooks";
-import { acercaDe, equipoPhentta, preguntasFrecuentes } from "../../mocks/data"
+import { acercaDe, equipoPhentta, preguntasFrecuentes, rutas } from "../../mocks/data"
+import { NavLink } from "react-router-dom";
 
 export const AboutUsPage = () => {
   const { language } = useLanguage();
   const dataAcercaDe = acercaDe.find(acercaDe => acercaDe.idioma === language).base;
   const dataEquipo = equipoPhentta.find(equipo => equipo.idioma === language);
   const dataPreguntasFrecuentes = preguntasFrecuentes.find(preguntasFrecuentes => preguntasFrecuentes.idioma === language);
-  
+  const menu = rutas.find(menu => menu.idioma === language);
   useEffect(() => {
     window.scroll({
       top: 0,
       behavior: 'smooth'
     });
   }, [])
-  
+
   return (
     <div className="container-page">
       <div className="margin-aboutus text-justify">
@@ -93,11 +94,21 @@ export const AboutUsPage = () => {
               dataPreguntasFrecuentes['base'] && dataPreguntasFrecuentes['base'].map((preguntasFrecuentes, index) => (
                 <div key={index} className="my-2">
                   <h2 className="mt-4 mb-1">{index + 1}. {preguntasFrecuentes.title}</h2>
-                  <p>{preguntasFrecuentes.description}</p>
+                  <p>
+
+                    {index !== 3 ? (
+                      preguntasFrecuentes.description
+                    ) : (
+
+                      <>
+                        {preguntasFrecuentes.description[0]}<NavLink to={menu.base[4].link} className='hover-text'>{preguntasFrecuentes.description[1]}</NavLink>
+                      </>
+                    )}
+                  </p>
                 </div>
+
               ))
             }
-
           </div>
         </div>
       </div>

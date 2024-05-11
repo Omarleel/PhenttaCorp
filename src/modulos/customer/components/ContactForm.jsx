@@ -131,7 +131,7 @@ export const ContactForm = () => {
                             >
                                 {
                                     countryCodes.map( (country, index) => (
-                                        <option key={index} value={country.dial_code}>
+                                        <option key={index} value={`${country.code}${country.dial_code}`}>
                                            {country.name} ({country.dial_code})
                                         </option>
                                     ))}

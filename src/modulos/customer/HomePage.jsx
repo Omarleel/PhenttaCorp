@@ -1,4 +1,4 @@
-import { menus, presentacion, servicios, trabajarConNosotros } from "../../mocks/data";
+import { rutas, presentacion, servicios, trabajarConNosotros } from "../../mocks/data";
 import { useLanguage } from "../../hooks/useLanguage";
 import { useEffect } from "react";
 import { useLocation } from 'react-router-dom';
@@ -12,7 +12,7 @@ export const HomePage = () => {
   const dataServicios = servicios.find(servicio => servicio.idioma === language);
   const dataTrabajarConNosotros = trabajarConNosotros.find(trabajarConNosotros => trabajarConNosotros.idioma === language);
   const location = useLocation();
-  const menuBase = menus.find(menu => menu.idioma === language)['base'];
+  const menuBase = rutas.find(menu => menu.idioma === language)['base'];
 
   useEffect(() => {
     const hash = location.pathname.replace('/', '#');

@@ -27,29 +27,39 @@ export const idiomas = [
     },
 ]
 
-export const menus = [
+export const rutas = [
     {
         idioma: "es",
         base: [
             {
                 label: "Inicio",
                 link: "/inicio",
+                visible: true,
             },
             {
                 label: "Servicios",
                 link: "/servicios",
+                visible: true,
             },
             {
                 label: "Nosotros",
                 link: "/nosotros",
+                visible: true,
             },
             {
                 label: "Contáctanos",
                 link: "/contacto",
+                visible: true,
+            },
+            {
+                label: "Empleos",
+                link: "/empleos",
+                visible: false,
             },
             {
                 label: "Idiomas",
                 items: idiomas[0]['base'],
+                visible: true,
             },
         ]
     },
@@ -59,22 +69,32 @@ export const menus = [
             {
                 label: "Home",
                 link: "/home",
+                visible: true,
             },
             {
                 label: "Services",
                 link: "/services",
+                visible: true,
             },
             {
                 label: "About us",
                 link: "/about",
+                visible: true,
             },
             {
                 label: "Contact us",
                 link: "/contact",
+                visible: true,
+            },
+            {
+                label: "Jobs",
+                link: "/jobs",
+                visible: false,
             },
             {
                 label: "Languages",
                 items: idiomas[1]['base'],
+                visible: true,
             },
         ]
     },
@@ -295,7 +315,7 @@ export const preguntasFrecuentes = [
             },
             { 
                 title: "¿Están contratando personal en este momento?",
-                description: "Siempre estamos buscando talento excepcional para unirse a nuestro equipo. Si estás interesado en formar parte de una empresa innovadora y apasionada por la tecnología, te animamos a que revises nuestras oportunidades laborales actuales en nuestra página de empleos. " 
+                description: ["Siempre estamos buscando talento excepcional para unirse a nuestro equipo. Si estás interesado en formar parte de una empresa innovadora y apasionada por la tecnología, te animamos a que revises nuestras oportunidades laborales actuales en nuestra ", "página de empleos." ]
             },
             { 
                 title: "¿Cuáles son sus planes a futuro?",
@@ -321,7 +341,7 @@ export const preguntasFrecuentes = [
             },
             {
                 title: "Are you hiring right now?",
-                description: "We are always looking for exceptional talent to join our team. If you are interested in joining an innovative company passionate about technology, we encourage you to review our current job opportunities on our jobs page."
+                description: ["We are always looking for exceptional talent to join our team. If you are interested in joining an innovative company passionate about technology, we encourage you to review our current job opportunities on our ", "jobs page."]
             },
             {
                 title: "What are your future plans?",

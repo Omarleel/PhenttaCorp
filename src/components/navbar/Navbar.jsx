@@ -5,7 +5,7 @@ import { rutaLogoPimarioDark, rutaLogoPimarioLight, sizeIcons } from '../../cons
 import './navbar.css';
 import { useTheme } from '../../hooks/useTheme';
 import { useLanguage } from '../../hooks/useLanguage';
-import { menus } from '../../mocks/data';
+import { rutas } from '../../mocks/data';
 
 export const Navbar = () => {
   const [showSubmenu, setShowSubmenu] = useState(false);
@@ -57,7 +57,7 @@ export const Navbar = () => {
   };
 
   // Obtener el menú correspondiente al idioma actual seleccionado
-  const currentMenu = menus.find((menu) => menu.idioma === language);
+  const currentMenu = rutas.find((menu) => menu.idioma === language);
 
   return (
     <nav className="container-navbar">
@@ -73,9 +73,9 @@ export const Navbar = () => {
               {/* Agrega código para manejar los elementos con submenús si es necesario */}
             </React.Fragment>
           ) : (
-            <NavLink key={menuItem.label} to={menuItem.link} className={({ isActive }) => `${isActive ? 'current-menu' : 'menu-navbar'}`}>
+            menuItem.visible === true && (<NavLink key={menuItem.label} to={menuItem.link} className={({ isActive }) => `${isActive ? 'current-menu' : 'menu-navbar'}`}>
               <span className="my-0">{menuItem.label}</span>
-            </NavLink>
+            </NavLink>)
           )
         )}
         <div>

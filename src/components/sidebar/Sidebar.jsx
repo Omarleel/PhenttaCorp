@@ -7,7 +7,7 @@ import Swal from 'sweetalert2';
 import { customClass } from '../../constants/colors';
 import { sizeIcons } from '../../constants/constants';
 import { useLanguage } from '../../hooks/useLanguage';
-import { menus } from '../../mocks/data';
+import { rutas } from '../../mocks/data';
 export const Sidebar = ({ backgroundLocked = false }) => {
   const { setPreferredLanguage, language } = useLanguage();
   const [isSidebarOpen, setIsSidebarOpen] = useState(false);
@@ -51,7 +51,7 @@ export const Sidebar = ({ backgroundLocked = false }) => {
   };
 
   // Obtener el menú correspondiente al idioma actual seleccionado
-  const currentMenu = menus.find(menu => menu.idioma === language);
+  const currentMenu = rutas.find(menu => menu.idioma === language);
 
   return (
     <aside className="container-sidebar">
@@ -102,13 +102,14 @@ export const Sidebar = ({ backgroundLocked = false }) => {
                 </>
               ) : (
                 // Renderizar enlace normal si no tiene submenús
-                <NavLink
+                menuItem.visible === true &&
+                (<NavLink
                   to={menuItem.link}
                   onClick={() => setIsSidebarOpen(false)} // Cerrar sidebar al hacer clic en un enlace
                   className={({ isActive }) => `${isActive ? 'current-menu' : 'menu-sidebar'} menu-container`}
                 >
                   <span className='ml-2 block'>{menuItem.label}</span>
-                </NavLink>
+                </NavLink>)
               )}
             </li>
           ))}
