@@ -434,7 +434,8 @@ export const mensajesAlerta = [
         idioma: "es",
         base: [
             {
-                invalidEmail: "Por favor, ingrese un correo electrónico válido."
+                invalidEmail: "Por favor, ingrese un correo electrónico válido.",
+                defaultSelect: "-- Seleccione una opción --"
             }
         ]
     },
@@ -442,7 +443,8 @@ export const mensajesAlerta = [
         idioma: "en",
         base: [
             {
-                invalidEmail: "Please, enter a valid email address."
+                invalidEmail: "Please, enter a valid email address.",
+                defaultSelect: "-- Please select --"
             }
         ]
     },

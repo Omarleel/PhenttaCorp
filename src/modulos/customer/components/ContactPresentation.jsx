@@ -1,11 +1,17 @@
+import { useEffect } from "react";
 import { useLanguage } from "../../../hooks";
 import { useFormSlide } from "../../../hooks/useFormSlide";
 import { contactanos } from "../../../mocks/data";
 
 export const ContactPresentation = () => {
     const { language } = useLanguage();
-    const {setFormCurrentStep: setCurrentStep, setData, getFormCurrentState: currentStep} = useFormSlide();
+    const {setFormCurrentStep: setCurrentStep, setData, getFormCurrentState: currentStep, resetFormSlide} = useFormSlide();
     const dataContactanos = contactanos.find(contactanos => contactanos.idioma === language);
+    
+    useEffect(() => {
+        resetFormSlide();
+    }, [])
+
     const handleOnclick = (tipoCliente) =>{
         setCurrentStep(currentStep+1);
         setData({tipoCliente: tipoCliente});

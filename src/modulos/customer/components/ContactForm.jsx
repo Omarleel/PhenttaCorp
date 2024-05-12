@@ -8,7 +8,7 @@ const formFields = {
     nombres: '',
     apellidos: '',
     email: '',
-    codigoPais: '',
+    codigoPais: 'PE+51',
     celular: '',
     empresa: '',
     cargo: '',
@@ -180,6 +180,7 @@ export const ContactForm = () => {
                                 onChange={onInputChange}
                                 required
                             >
+                                <option value="" disabled>{dataMensajesAlerta.base[0].defaultSelect}</option>
                                 {
                                     dataCargos && dataCargos.base.map((cargo) => (
                                         <option key={cargo} value={cargo}>
@@ -204,6 +205,7 @@ export const ContactForm = () => {
                                 onChange={onInputChange}
                                 required
                             >
+                                <option value="" disabled>{dataMensajesAlerta.base[0].defaultSelect}</option>
                                 {
                                     dataContactanosFormulario.base[1].services && dataContactanosFormulario.base[1].services.map((servicio) => (
                                         <option key={servicio} value={servicio}>
