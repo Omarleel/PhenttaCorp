@@ -29,7 +29,7 @@ export const CustomFormSlide = ({ steps }) => {
         <div className="flex justify-between mt-4 absolute w-full">
           {currentStep > 0 && (
             <button
-              className="p-4 absolute z-20 left-0 hover-text"
+              className="p-4 absolute z-30 left-0 hover-text"
               onClick={prevStep}
             >
               <HiChevronLeft size={sizeIcons} />
@@ -37,7 +37,7 @@ export const CustomFormSlide = ({ steps }) => {
           )}
           {currentStep < steps.length - 1 && (
             <button
-              className="p-4 absolute z-20 right-0 hover-text"
+              className="p-4 absolute z-30 right-0 hover-text"
               onClick={nextStep}
             >
               <HiChevronRight size={sizeIcons} />
@@ -51,7 +51,7 @@ export const CustomFormSlide = ({ steps }) => {
           <div
             key={index}
             className={`transform transition-transform duration-300 ${
-              currentStep === index ? 'translate-x-0 w-full visile' : 'translate-x-full w-0 h-0 invisible'
+              currentStep === index ? 'translate-x-0 w-full visile z-20' : 'translate-x-full w-0 h-0 invisible z-10'
             }`}
           >
             {form}
