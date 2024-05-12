@@ -545,3 +545,24 @@ export const empleos = [
         ]
     }
 ]
+
+export const empleosDisponibles = [
+    {
+        idioma: "es",
+        base: [
+            "Desarrollador de Aplicaciones Móviles",
+            "Desarrollador de Páginas Webs",
+            "Consultor en Automatización de Procesos Empresariales",
+            "Diseño de Experiencia de Usuario",
+        ]
+    },
+    {
+        idioma: "en",
+        base: [
+            "Mobile Application Developer",
+            "Web Page Developer",
+            "Business Process Automation Consultant",
+            "User Experience Design",
+        ]
+    },
+];
