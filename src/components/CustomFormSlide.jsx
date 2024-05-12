@@ -36,7 +36,7 @@ export const CustomFormSlide = ({ steps }) => {
             )}
             <div className="flex">
             {steps.map((forms, index) => (
-                <div className={`w-full transition-all duration-300 ${currentStep === index ? 'visible' : 'invisible w-0 h-0'}`}>
+                <div key={index} className={`transition-all duration-300 ${currentStep === index ? 'visible w-full' : 'invisible w-0 h-0'}`}>
                     { forms }
                 </div>
             ))}
