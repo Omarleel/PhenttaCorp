@@ -51,7 +51,7 @@ export const CustomFormSlide = ({ steps }) => {
           <div
             key={index}
             className={`transform transition-transform duration-300 ${
-              currentStep === index ? 'translate-x-0 w-full visile' : 'translate-x-full w-0 invisible'
+              currentStep === index ? 'translate-x-0 w-full visile' : 'translate-x-full w-0 h-0 invisible'
             }`}
           >
             {form}
