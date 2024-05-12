@@ -45,7 +45,7 @@ export const ContactForm = () => {
         //resetFormSlide();
     }
     return (
-        <div className={`background-secondary flex max-md:flex-col items-center justify-center min-h-screen`}>
+        <div className={`background-secondary transition-all duration-300 flex max-md:flex-col items-center justify-center min-h-screen`}>
             <div className="md:w-2/4 p-4 max-sm:hidden">
                 <img src="/assets/images/contact/customerSupport.svg" />
             </div>

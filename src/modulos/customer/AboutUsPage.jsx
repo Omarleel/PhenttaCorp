@@ -74,7 +74,7 @@ export const AboutUsPage = () => {
             ))}
           </div>
           <div className="sm:hidden max-sm:block rounded my-4">
-            <CustomCarousel>
+            <CustomCarousel interval={3000}>
               {dataEquipo['base'] && dataEquipo['base'].map((equipo, index) => (
                 <div key={index} className="background-secondary rounded-lg shadow px-8 mt-4 pb-10 text-center">
                   <img src={equipo.image} className="w-2/4 mx-auto" />

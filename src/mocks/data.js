@@ -303,7 +303,7 @@ export const preguntasFrecuentes = [
         base: [
             { 
                 title: "¿Cómo puedo comenzar a trabajar con ustedes?",
-                description: "Es fácil comenzar a trabajar con nosotros. Simplemente contáctanos a través de nuestro formulario de contacto en línea o envíanos un correo electrónico acontacto@phentta.com  Uno de nuestros representantes se pondrá en contacto contigo para discutir tus necesidades y cómo podemos ayudarte" 
+                description: "Es fácil comenzar a trabajar con nosotros. Simplemente contáctanos a través de nuestro formulario de contacto en línea o envíanos un correo electrónico a contacto@phentta.com  Uno de nuestros representantes se pondrá en contacto contigo para discutir tus necesidades y cómo podemos ayudarte" 
             },
             { 
                 title: "¿Cuál es su enfoque en cuanto a la atención al cliente?",
@@ -512,3 +512,34 @@ export const cargos = [
        ]
     },
 ];
+
+export const empleos = [
+    {
+        idioma: "es",
+        titulo: "¡Únete a nuestro equipo y forma parte de la innovación tecnológica!",
+        base: [
+            {
+                title: "",
+                description: "",
+            },
+            {
+                btnPrimary: "",
+                btnSecondary: "",
+            },
+        ]
+    },
+    {
+        idioma: "en",
+        titulo: "Join our team and be part of technological innovation!",
+        base: [
+            {
+                title: "",
+                description: "",
+            },
+            {
+                btnPrimary: "",
+                btnSecondary: "",
+            },
+        ]
+    }
+]

@@ -23,21 +23,26 @@ export const CustomFormSlide = ({ steps }) => {
             { (getFormData && Object.keys(getFormData).length > 0) && (
                 <div className="flex justify-between mt-4 absolute w-full">
                 {currentStep > 0 && (
-                    <button className="p-4 absolute left-0" onClick={prevStep}>
+                    <button className="p-4 absolute left-0 hover-text" onClick={prevStep}>
                         <HiChevronLeft size={sizeIcons} />
                     </button>
                 )}
                 {currentStep < steps.length - 1 && (
-                    <button className="p-4 absolute right-0" onClick={nextStep}>
+                    <button className="p-4 absolute right-0 hover-text" onClick={nextStep}>
                         <HiChevronRight size={sizeIcons} />
                     </button>
                 )}
             </div>
             )}
-            
-
-            {/* Renderizar el componente del paso actual */}
-            {steps[currentStep]}
+            <div className="flex">
+            {steps.map((forms, index) => (
+                <div className={`w-full transition-all duration-300 ${currentStep === index ? 'visible' : 'invisible w-0 h-0'}`}>
+                    { forms }
+                </div>
+            ))}
+            </div>
+            {/* {steps[currentStep]} */}
+          
         </div>
     );
 };
