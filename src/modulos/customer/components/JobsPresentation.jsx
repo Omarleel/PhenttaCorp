@@ -17,18 +17,18 @@ export const JobsPresentation = () => {
         setData({ tipoCliente: tipoCliente });
     };
     return (
-        <div className="max-md:flex-col max-md:py-4 sm:flex items-center px-4 md:px-8">
-            <div className="sm:w-2/4 order-2 text-center">
+        <div className="max-md:flex-col max-md:py-4 md:flex items-center px-4 md:px-8">
+            <div className="md:w-2/4 order-2 text-center">
                 <h1>{dataEmpleosFormulario.titulo}</h1>
                 {/* Botón para postular visible en dispositivos pequeños */}
-                <button className="btn-primary max-sm:hidden w-2/5" onClick={() => handleOnclick('Postulante')}>{dataEmpleosFormulario.boton}</button>
+                <button className="btn-primary max-md:hidden w-2/5" onClick={() => handleOnclick('Postulante')}>{dataEmpleosFormulario.boton}</button>
             </div>
-            <div className="sm:w-2/4 order-1 relative">
+            <div className="md:w-2/4 order-1 relative">
                 {/* Imagen con contenedor relativo */}
                 <img className="px-4" src="/assets/images/jobs/jobs.svg" alt="Jobs" />
                 {/* Botón para postular posicionado en el lado derecho inferior */}
                 <button
-                    className="btn-primary w-2/5 sm:hidden absolute bottom-4 right-4 sm:bottom-8 sm:right-8"
+                    className="btn-primary w-2/5 md:hidden absolute bottom-4 right-4 md:bottom-8 md:right-8"
                     onClick={() => handleOnclick('Postulante')}
                 >
                     {dataEmpleosFormulario.boton}
