@@ -515,32 +515,48 @@ export const cargos = [
     },
 ];
 
-export const empleos = [
+export const empleosFormulario = [
     {
         idioma: "es",
         titulo: "¡Únete a nuestro equipo y forma parte de la innovación tecnológica!",
+        boton: "Postular",
         base: [
             {
-                title: "",
+                title: "¡No encantaría saber de ti!",
                 description: "",
             },
-            {
-                btnPrimary: "",
-                btnSecondary: "",
+            { 
+                firstName: "Nombre",
+                lastName: "Apellidos",
+                email: "Correo electrónico",
+                countryCode: 'Código de país',
+                phone: "Celular de contacto",
+                curriculum: "Currículum vitae",
+                letter: "Carta de presentación",
+                experience: "Experiencia laboral",
+                button: "Enviar",
             },
         ]
     },
     {
         idioma: "en",
         titulo: "Join our team and be part of technological innovation!",
+        boton: "Postulate",
         base: [
             {
-                title: "",
+                title: "Wouldn't love to hear about you!",
                 description: "",
             },
-            {
-                btnPrimary: "",
-                btnSecondary: "",
+            { 
+                firstName: "First name",
+                lastName: "Last name",
+                email: "Email",
+                countryCode: 'Coundry code',
+                phone: "Phone number",
+                curriculum: "Curriculum vitae",
+                letter: "Presentation letter",
+                experience: "Work experience",
+                button: "Send",
             },
         ]
     }
@@ -550,19 +566,37 @@ export const empleosDisponibles = [
     {
         idioma: "es",
         base: [
-            "Desarrollador de Aplicaciones Móviles",
-            "Desarrollador de Páginas Webs",
-            "Consultor en Automatización de Procesos Empresariales",
-            "Diseño de Experiencia de Usuario",
+            {
+                jobs: [
+
+                ],
+                departments: [
+
+                ],
+                types: [
+                    'Presencial',
+                    'Remoto'
+                ]
+            },
+
         ]
     },
     {
         idioma: "en",
         base: [
-            "Mobile Application Developer",
-            "Web Page Developer",
-            "Business Process Automation Consultant",
-            "User Experience Design",
+            {
+                jobs: [
+
+                ],
+                departments: [
+
+                ],
+                types: [
+                    'In person',
+                    'Remote'
+                ]
+            },
+
         ]
     },
 ];

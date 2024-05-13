@@ -45,7 +45,7 @@ export const HomePage = () => {
         </div>
         {/* Contenedor de la Imagen (Columna 1) */}
         <div className="sm:w-2/4 max-sm:w-full sm:order-1 sm:mr-4">
-          <img src="/assets/images/image-1.png" alt="Phentta" className="w-full" />
+          <img src="/assets/images/image-1.svg" alt="Phentta" className="w-full" />
         </div>
       </div>
       {/* Sección de servicios */}
@@ -95,7 +95,7 @@ export const HomePage = () => {
             ))}
           </div>
           <div className="sm:w-2/4 max-sm:w-full max-sm:mt-4 sm:ml-4">
-            <img src="/assets/images/image-2.png" alt="Phentta" className="w-full" />
+            <img src="/assets/images/image-2.svg" alt="Phentta" className="w-full" />
           </div>
         </div>
       </div>

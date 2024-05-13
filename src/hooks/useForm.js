@@ -22,7 +22,6 @@ export const useForm = (initialForm = {}, formValidations = {}) => {
   }, [formValidation]);
 
   const onInputChange = (event) => {
-    console.log(event)
     const { name, type, files, value } = event.target || {};
     let newValue;
 
