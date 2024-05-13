@@ -31,7 +31,7 @@ export const AboutUsPage = () => {
                 className="items-center text-3xl lg:text-6xl font-bold mb-4 text-color-primary"
               />
             </div>
-            <img className="sm:w-2/4" src="/assets/images/aboutus/presentation.png"></img>
+            <img className="sm:w-2/4" src="/assets/images/aboutus/presentation.svg"></img>
           </div>
         </div>
         {/* Sección Acerca de */}
@@ -49,14 +49,14 @@ export const AboutUsPage = () => {
               <h1>{dataAcercaDe[2].title}</h1>
               <p>{dataAcercaDe[2].description}</p>
             </div>
-            <img src="/assets/images/aboutus/vision.png" className="w-full order-1 sm:w-1/4"></img>
+            <img src="/assets/images/aboutus/vision.svg" className="w-full order-1 sm:w-1/4"></img>
           </div>
           <div className="sm:flex items-center my-4">
             <div className="sm:w-2/3 md:mx-10">
               <h1>{dataAcercaDe[3].title}</h1>
               <p> {dataAcercaDe[3].description}</p>
             </div>
-            <img src="/assets/images/aboutus/mission.png" className="w-full sm:w-1/3"></img>
+            <img src="/assets/images/aboutus/mission.svg" className="w-full sm:w-1/3"></img>
           </div>
         </div>
         {/* Sección Equipo */}

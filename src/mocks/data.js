@@ -435,7 +435,8 @@ export const mensajesAlerta = [
         base: [
             {
                 invalidEmail: "Por favor, ingrese un correo electrónico válido.",
-                defaultSelect: "-- Seleccione una opción --"
+                defaultSelect: "-- Seleccione una opción --",
+                cvSupportedFilyTypes: "Tipos de archivos admitidos: pdf, doc, docx",
             }
         ]
     },
@@ -444,7 +445,8 @@ export const mensajesAlerta = [
         base: [
             {
                 invalidEmail: "Please, enter a valid email address.",
-                defaultSelect: "-- Please select --"
+                defaultSelect: "-- Please select --",
+                cvSupportedFilyTypes: "Supported file types: pdf, doc, docx",
             }
         ]
     },

@@ -4,6 +4,9 @@ import { useForm, useLanguage } from '../../../hooks';
 import { countryCodes } from '../../../mocks/countryCodes';
 import { useFormSlide } from '../../../hooks/useFormSlide';
 import { empleosFormulario, mensajesAlerta } from '../../../mocks/data';
+import { HiInformationCircle } from "react-icons/hi";
+import { CustomTooltip } from '../../../components/CustomTooltip';
+import { Tooltip } from 'react-tooltip';
 
 const formFields = {
   nombres: '',
@@ -105,39 +108,49 @@ export const JobsForm = () => {
               </div>
             </div>
             <div>
-                            <label htmlFor="codigoPais" className="primary-label">
-                                {dataEmpleosFormulario.base[1].phone}
-                            </label>
-                            <div className="flex space-x-2">
-                            <select
-                                id="codigoPais"
-                                name="codigoPais"
-                                className="primary-input p-2 min-w-24 w-2/5"
-                                value={codigoPais}
-                                onChange={onInputChange}
-                                required
-                            >
-                                {
-                                    countryCodes.map( (country, index) => (
-                                        <option key={index} value={`${country.code}${country.dial_code}`}>
-                                           {country.name} ({country.dial_code})
-                                        </option>
-                                    ))}
-                            </select>
-                                <input
-                                    id="celular"
-                                    type="tel"
-                                    name="celular"
-                                    autoComplete="false"
-                                    placeholder=""
-                                    className="primary-input p-2 w-full"
-                                    value={celular}
-                                    onChange={onInputChange}
-                                />
-                            </div>
-                        </div>
+              <label htmlFor="codigoPais" className="primary-label">
+                {dataEmpleosFormulario.base[1].phone}
+              </label>
+              <div className="flex space-x-2">
+                <select
+                  id="codigoPais"
+                  name="codigoPais"
+                  className="primary-input p-2 min-w-24 w-2/5"
+                  value={codigoPais}
+                  onChange={onInputChange}
+                  required
+                >
+                  {
+                    countryCodes.map((country, index) => (
+                      <option key={index} value={`${country.code}${country.dial_code}`}>
+                        {country.name} ({country.dial_code})
+                      </option>
+                    ))}
+                </select>
+                <input
+                  id="celular"
+                  type="tel"
+                  name="celular"
+                  autoComplete="false"
+                  placeholder=""
+                  className="primary-input p-2 w-full"
+                  value={celular}
+                  onChange={onInputChange}
+                />
+              </div>
+            </div>
             <div>
-              <label htmlFor="curriculumVitae" className="primary-label">{dataEmpleosFormulario.base[1].curriculum}</label>
+            <label htmlFor="curriculumVitae" className="primary-label">
+                  <div className="flex items-center space-x-2">
+                      <span>{dataEmpleosFormulario.base[1].curriculum}</span>
+                      <CustomTooltip
+                          tooltipId={1}
+                          visibleText={<HiInformationCircle />}
+                          tooltipText={dataMensajesAlerta.base[0].cvSupportedFilyTypes}
+                      />
+                  </div>
+              </label>
+            
               <input
                 id="curriculumVitae"
                 type="file"
@@ -150,7 +163,16 @@ export const JobsForm = () => {
               />
             </div>
             <div>
-              <label htmlFor="cartaPresentacion" className="primary-label">{dataEmpleosFormulario.base[1].letter}</label>
+            <label htmlFor="cartaPresentacion" className="primary-label">
+                  <div className="flex items-center space-x-2">
+                      <span>{dataEmpleosFormulario.base[1].letter}</span>
+                      <CustomTooltip
+                          tooltipId={1}
+                          visibleText={<HiInformationCircle />}
+                          tooltipText={dataMensajesAlerta.base[0].cvSupportedFilyTypes}
+                      />
+                  </div>
+              </label>
               <input
                 id="cartaPresentacion"
                 type="file"
