@@ -52,9 +52,9 @@ export const JobsForm = () => {
 
   return (
     <div className="background-secondary flex max-md:flex-col items-center justify-center min-h-screen">
-      {/* <div className="md:w-2/4 p-4 max-sm:hidden">
-          <img src="/assets/images/contact/customerSupport.svg" />
-      </div> */}
+      <div className="md:w-2/4 p-4 max-sm:hidden">
+          <img src="/assets/images/jobs/recruitment.svg" />
+      </div>
       <div className="md:w-2/4 text-center mx-4 md:mx-8 my-8">
         <h1>{dataEmpleosFormulario.base[0].title}</h1>
         <div className="flex flex-col text-left mx-auto my-2 space-y-2 background-primary p-4 rounded-lg">

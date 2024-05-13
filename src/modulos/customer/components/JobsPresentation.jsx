@@ -18,7 +18,7 @@ export const JobsPresentation = () => {
     };
     return (
         <div className="max-md:flex-col max-md:py-4 sm:flex items-center px-4 md:px-8">
-            <div className="sm:w-2/4 order-2">
+            <div className="sm:w-2/4 order-2 text-center">
                 <h1>{dataEmpleosFormulario.titulo}</h1>
                 {/* Botón para postular visible en dispositivos pequeños */}
                 <button className="btn-primary max-sm:hidden w-2/5" onClick={() => handleOnclick('Postulante')}>{dataEmpleosFormulario.boton}</button>
