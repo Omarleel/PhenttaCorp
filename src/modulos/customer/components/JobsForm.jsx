@@ -56,12 +56,12 @@ export const JobsForm = () => {
           <img src="/assets/images/jobs/recruitment.svg" />
       </div>
       <div className="md:w-2/4 text-center mx-4 md:mx-8 my-8">
-        <h1>{dataEmpleosFormulario.base[0].title}</h1>
+        <h1>{dataEmpleosFormulario.base[1].title}</h1>
         <div className="flex flex-col text-left mx-auto my-2 space-y-2 background-primary p-4 rounded-lg">
           <form onSubmit={handleSubmit}>
             <div className="flex space-x-4">
               <div className="w-1/2">
-                <label htmlFor="nombres" className="primary-label">{dataEmpleosFormulario.base[1].firstName}</label>
+                <label htmlFor="nombres" className="primary-label">{dataEmpleosFormulario.base[2].firstName}</label>
                 <input
                   id="nombres"
                   type="text"
@@ -73,7 +73,7 @@ export const JobsForm = () => {
                 />
               </div>
               <div className="w-1/2">
-                <label htmlFor="apellidos" className="primary-label">{dataEmpleosFormulario.base[1].lastName}</label>
+                <label htmlFor="apellidos" className="primary-label">{dataEmpleosFormulario.base[2].lastName}</label>
                 <input
                   id="apellidos"
                   type="text"
@@ -87,7 +87,7 @@ export const JobsForm = () => {
             </div>
             <div>
               <label htmlFor="email" className="primary-label">
-                {dataEmpleosFormulario.base[1].email}
+                {dataEmpleosFormulario.base[2].email}
               </label>
               <div>
                 <input
@@ -109,7 +109,7 @@ export const JobsForm = () => {
             </div>
             <div>
               <label htmlFor="codigoPais" className="primary-label">
-                {dataEmpleosFormulario.base[1].phone}
+                {dataEmpleosFormulario.base[2].phone}
               </label>
               <div className="flex space-x-2">
                 <select
@@ -142,7 +142,7 @@ export const JobsForm = () => {
             <div>
             <label htmlFor="curriculumVitae" className="primary-label">
                   <div className="flex items-center space-x-2">
-                      <span>{dataEmpleosFormulario.base[1].curriculum}</span>
+                      <span>{dataEmpleosFormulario.base[2].curriculum}</span>
                       <CustomTooltip
                           tooltipId={1}
                           visibleText={<HiInformationCircle />}
@@ -165,7 +165,7 @@ export const JobsForm = () => {
             <div>
             <label htmlFor="cartaPresentacion" className="primary-label">
                   <div className="flex items-center space-x-2">
-                      <span>{dataEmpleosFormulario.base[1].letter}</span>
+                      <span>{dataEmpleosFormulario.base[2].letter}</span>
                       <CustomTooltip
                           tooltipId={1}
                           visibleText={<HiInformationCircle />}
@@ -185,7 +185,7 @@ export const JobsForm = () => {
               />
             </div>
             <div>
-              <label htmlFor="experienciaLaboral" className="primary-label">{dataEmpleosFormulario.base[1].experience}</label>
+              <label htmlFor="experienciaLaboral" className="primary-label">{dataEmpleosFormulario.base[2].experience}</label>
               <input
                 id="experienciaLaboral"
                 type="number"
@@ -198,7 +198,7 @@ export const JobsForm = () => {
             </div>
             <div className="flex justify-center">
               <button type="submit" className="btn-primary w-full mt-5">
-                {dataEmpleosFormulario.base[1].button}
+                {dataEmpleosFormulario.base[2].button}
               </button>
             </div>
           </form>

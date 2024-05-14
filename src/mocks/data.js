@@ -524,6 +524,10 @@ export const empleosFormulario = [
         boton: "Postular",
         base: [
             {
+                title: "Empleos en Phentta",
+                description: "Lamentablemente, en este momento no estamos contratando. ¡Gracias por tu interés en formar parte de nuestro equipo!",
+            },
+            {
                 title: "¡No encantaría saber de ti!",
                 description: "",
             },
@@ -545,6 +549,10 @@ export const empleosFormulario = [
         titulo: "Join our team and be part of technological innovation!",
         boton: "Postulate",
         base: [
+            {
+                title: "Jobs at Phentta",
+                description: "Unfortunately, we are not hiring at this time. Thank you for your interest in being part of our team!",
+            },
             {
                 title: "Wouldn't love to hear about you!",
                 description: "",

@@ -101,7 +101,7 @@ export const AboutUsPage = () => {
                     ) : (
 
                       <>
-                        {preguntasFrecuentes.description[0]}<NavLink to={menu.base[4].link} className='hover-text'>{preguntasFrecuentes.description[1]}</NavLink>
+                        {preguntasFrecuentes.description[0]}<NavLink to={menu.base[4].link} className='text-color-hover dark:text-color-hover-dark hover:underline'>{preguntasFrecuentes.description[1]}</NavLink>
                       </>
                     )}
                   </p>
