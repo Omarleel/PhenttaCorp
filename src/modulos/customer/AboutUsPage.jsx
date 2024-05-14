@@ -56,7 +56,7 @@ export const AboutUsPage = () => {
               <h1>{dataAcercaDe[3].title}</h1>
               <p> {dataAcercaDe[3].description}</p>
             </div>
-            <img src="/assets/images/aboutus/mission.svg" className="w-full sm:w-1/3"></img>
+            <img src="/assets/images/aboutus/mission.svg" className="w-full sm:w-1/4"></img>
           </div>
         </div>
         {/* Sección Equipo */}

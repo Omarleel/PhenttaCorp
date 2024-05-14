@@ -115,7 +115,7 @@ export const JobsForm = () => {
                 <select
                   id="codigoPais"
                   name="codigoPais"
-                  className="primary-input p-2 min-w-24 w-2/5"
+                  className="select-input p-2 min-w-24 w-2/5"
                   value={codigoPais}
                   onChange={onInputChange}
                   required

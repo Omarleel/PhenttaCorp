@@ -6,6 +6,7 @@ import './navbar.css';
 import { useTheme } from '../../hooks/useTheme';
 import { useLanguage } from '../../hooks/useLanguage';
 import { rutas } from '../../mocks/data';
+import { CustomSVG } from '../CustomSVG';
 
 export const Navbar = () => {
   const [showSubmenu, setShowSubmenu] = useState(false);

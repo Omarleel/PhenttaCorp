@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { useTheme } from "../../hooks/useTheme";
 import { useLanguage } from "../../hooks/useLanguage";
 import { contactanosFooter, derechosReservados, encontrarnos } from "../../mocks/data";
+import { CustomSVG } from '../CustomSVG';
 
 export const Footer = () => {
     const { language } = useLanguage();
@@ -52,7 +53,7 @@ export const Footer = () => {
                 </div>
                 {/* Sección "Redes sociales" */}
                 <div className="flex flex-col items-center justify-center mt-4">
-                    <img className="h-9 min-w-fit" src={isDark ? rutaLogoPimarioDark : rutaLogoPimarioLight} alt="Logo" />
+                <img className="h-9 min-w-fit" src={isDark ? rutaLogoPimarioDark : rutaLogoPimarioLight} alt="Logo" />
                     <h4 className="!mt-3 !mb-2">{dataEncontrarnos[0].title}</h4>
                     <div className="flex justify-center items-center space-x-4">
                         <a href={urlFacebook} target="_blank">

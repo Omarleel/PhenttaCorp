@@ -9,8 +9,8 @@ export const urlFacebook = "https://www.facebook.com/phentta.com";
 export const urlInstagram = "https://www.instagram.com/phentta.com";
 export const urlYoutube = "#";
 // Assets (imagenes)
-export const rutaLogoPimarioDark = "/assets/images/primary-logo-dark.png";
-export const rutaLogoPimarioLight = "/assets/images/primary-logo-light.png";
+export const rutaLogoPimarioDark = "/assets/images/primary-logo-dark.svg";
+export const rutaLogoPimarioLight = "/assets/images/primary-logo-light.svg";
 export const rutaLogoSecundario = "/assets/images/secondary-logo.png";
 export const rutaFavicon = "/assets/images/favicon.ico";
 export const rutaProfilePreview = "/assets/images/profile.png"
