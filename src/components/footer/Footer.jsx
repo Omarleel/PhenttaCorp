@@ -7,7 +7,6 @@ import { useEffect, useState } from "react";
 import { useTheme } from "../../hooks/useTheme";
 import { useLanguage } from "../../hooks/useLanguage";
 import { contactanosFooter, derechosReservados, encontrarnos } from "../../mocks/data";
-import { CustomSVG } from '../CustomSVG';
 
 export const Footer = () => {
     const { language } = useLanguage();

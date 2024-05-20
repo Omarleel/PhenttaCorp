@@ -15,7 +15,7 @@ export const JobsAvailable = () => {
                 { dataEmpleosFormulario.base[0].description }
                 </h2>
             </div>
-            <div className="w-3/12 p-4 md:order-1">
+            <div className="w-3/12 min-w-32 p-4 md:order-1">
                 <img src="/assets/images/jobs/jobLess.svg" />
             </div>
 
