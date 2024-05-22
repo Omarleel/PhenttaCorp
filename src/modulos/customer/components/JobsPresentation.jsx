@@ -17,7 +17,7 @@ export const JobsPresentation = () => {
         setData({ tipoCliente: tipoCliente });
     };
     return (
-        <div className="max-md:flex-col max-md:py-4 md:flex items-center px-4 md:px-8">
+        <div className="background-secondary max-md:flex-col max-md:py-4 md:flex items-center px-4 md:px-8">
             <div className="md:w-2/4 order-2 text-center">
                 <h1>{dataEmpleosFormulario.titulo}</h1>
                 {/* Botón para postular visible en dispositivos pequeños */}

@@ -33,7 +33,7 @@ body {
     @apply border border-gray-300 px-3 py-2 focus:border-indigo-500 placeholder-gray-500 outline-none bg-primary-light text-black pr-4 py-2 rounded-lg dark:border-dark dark:text-white dark:bg-primary-dark dark:[color-scheme:dark];
 }
 .select-input {
-    @apply border truncate border-light bg-primary-light text-black px-4 py-2 rounded-lg dark:border-dark dark:text-white dark:bg-primary-dark dark:[color-scheme:dark]
+    @apply border border-gray-300 focus:border-indigo-500 focus:outline-none focus-visible:border-indigo-500 placeholder-gray-500 truncate bg-primary-light text-black px-4 py-2 rounded-lg dark:border-dark dark:text-white dark:bg-primary-dark dark:[color-scheme:dark]
     bg-[linear-gradient(45deg,_transparent_50%,_rgb(0,_0,_0)_50%),_linear-gradient(135deg,_black_50%,_transparent_50%),_linear-gradient(to_right,_rgb(241,_241,_241),_rgb(241,_241,_241))]
     dark:bg-[linear-gradient(45deg,_transparent_50%,_white_50%),_linear-gradient(135deg,_white,_50%,_transparent_50%),_linear-gradient(to_right,_rgb(37,_40,_54),_rgb(37,_40,_54))];
     -webkit-box-sizing: border-box;

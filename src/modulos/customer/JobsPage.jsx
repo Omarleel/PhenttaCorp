@@ -5,7 +5,7 @@ import { JobsForm } from "./components/JobsForm";
 import { JobsPresentation } from "./components/JobsPresentation";
 
 export const JobsPage = () => {
-    const steps = [<JobsPresentation />, <JobsAvailable />, /*<JobsForm />*/];
+    const steps = [<JobsPresentation />, <JobsAvailable />, <JobsForm />];
     useEffect(() => {
         window.scroll({
         top: 0,
