@@ -1,6 +1,6 @@
 import React from 'react'
 import { cargos, contactanosFormulario, mensajesAlerta } from '../../../mocks/data';
-import { useConnection, useForm, useLanguage } from '../../../hooks';
+import { useConnection, useForm, useLanguage, useRegistrar } from '../../../hooks';
 import { countryCodes } from '../../../mocks/countryCodes';
 import { useFormSlide } from '../../../hooks/useFormSlide';
 
@@ -17,6 +17,7 @@ const formFields = {
 export const ContactForm = () => {
     const { language } = useLanguage();
     const { isLoading } = useConnection();
+    const { sendContactEmail } = useRegistrar();
     const { setData, resetFormSlide, getFormData } = useFormSlide();
     const {
         nombres,
@@ -38,11 +39,13 @@ export const ContactForm = () => {
     const dataMensajesAlerta = mensajesAlerta.find(mensajeAlerta => mensajeAlerta.idioma === language);
     const dataCargos = cargos.find(cargo => cargo.idioma === language);
     
-    const onSubmit = (event) => {
+    const onSubmit = async (event) => {
         event.preventDefault();
         console.log('Form enviado', formState);
         setData(formState);
         //resetFormSlide();
+        const response = await sendContactEmail(formState);
+        console.log(response);
     }
     return (
         <div className={`background-secondary flex max-md:flex-col items-center justify-center min-h-screen`}>

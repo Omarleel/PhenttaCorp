@@ -45,35 +45,11 @@ export const useRegistrar = () => {
     // };
 
      // Método para registrar propietario
-     const registrarPropietario = async (dataEnviada) => {
-        return handleApiCall('/propietario', dataEnviada);
+     const sendContactEmail = async (dataEnviada) => {
+        return handleApiCall('/send-email', dataEnviada);
     };
-
-    // Método para registrar carnet
-    const registrarCarnet = async (dataEnviada) => {
-        return handleApiCall('/carnet', dataEnviada);
-    };
-
-    // Método para registrar licencia
-    const registrarLicencia = async (dataEnviada) => {
-        return handleApiCall('/licencia', dataEnviada);
-    };
-
-    // Método para registrar multa
-    const registrarMulta = async (dataEnviada) => {
-        return handleApiCall('/multa', dataEnviada);
-    };
-    // Método para registrar constancia
-    const registrarConstancia = async (dataEnviada) => {
-        return handleApiCall('/constancia/expedir', dataEnviada);
-    };
-
     return {
         /* Métodos */
-        registrarPropietario,
-        registrarCarnet,
-        registrarLicencia,
-        registrarMulta,
-        registrarConstancia,
+        sendContactEmail,
     };
 };
