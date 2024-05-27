@@ -39,15 +39,6 @@ export const Navbar = () => {
   }, [showSubmenu]); // El efecto se ejecuta cuando showSubmenu cambia
 
   const handleToggleDropdown = () => {
-    const submenu = document.getElementById("submenu");
-    if (!showSubmenu === false) {
-      setTimeout(() => {
-        submenu.classList.add("hidden");
-      }, 200);
-    }
-    else {
-      submenu.classList.add("block");
-    }
     setShowSubmenu(!showSubmenu);
   };
 
@@ -74,25 +65,25 @@ export const Navbar = () => {
               {/* Agrega código para manejar los elementos con submenús si es necesario */}
             </React.Fragment>
           ) : (
-            menuItem.visible === true && (<NavLink key={menuItem.label} to={menuItem.link} className={({ isActive }) => `${isActive ? 'current-menu' : 'menu-navbar'}`}>
+            menuItem.visible === true && (<NavLink key={menuItem.label} to={menuItem.link} className={({ isActive }) => `${isActive ? 'current-menu' : 'menu'} z-20`}>
               <span className="my-0">{menuItem.label}</span>
             </NavLink>)
           )
         )}
         <div>
-          <button ref={globeButtonRef} className="menu-navbar my-0" onClick={handleToggleDropdown}>
+          <button ref={globeButtonRef} className="menu my-0 relative z-20" onClick={handleToggleDropdown}>
             <HiOutlineGlobeAlt size={sizeIcons} />
           </button>
           <div
             ref={submenuRef}
-            className={`${showSubmenu ? 'h-20' : 'h-0'} absolute shadow-md rounded-b right-20 top-[72px] w-36 background-secondary transition-all duration-300 flex flex-col justify-center`}
+            className={`${showSubmenu ? 'top-0 visible' : 'top-[-30px] invisible'} z-10 absolute shadow-md rounded-b right-20 top-[72px] w-36 background-secondary transition-all duration-300 flex flex-col justify-center`}
           >
-            <ul id="submenu" className={`${showSubmenu ? 'h-20' : 'h-0'} background-secondary rounded transition-all duration-300 flex flex-col justify-center`}>
+            <ul className={`sub-menu`}>
               {currentMenu.base
                 .find((item) => item.label === 'Idiomas' || item.label === 'Languages')
                 ?.items.map((idioma, index) => (
                   <li className={`cursor-pointer ${showSubmenu ? 'pointer-events-auto' : 'pointer-events-none'}`} key={index}>
-                    <button className={`${showSubmenu ? 'visible' : 'invisible'} container-menu  menu-navbar w-full`} onClick={() => handleDropdown(idioma.code)}>
+                    <button className={` menu`} onClick={() => handleDropdown(idioma.code)}>
                       {idioma.label}
                     </button>
                   </li>
@@ -100,8 +91,8 @@ export const Navbar = () => {
             </ul>
           </div>
         </div>
-        <div className="flex items-center">
-          <button onClick={handleThemeSwitch} className="container-menu menu-navbar">
+        <div className="container-menu">
+          <button onClick={handleThemeSwitch} className="menu">
             {isDark ? <HiMoon size={sizeIcons} /> : <HiSun size={sizeIcons} />}
           </button>
         </div>

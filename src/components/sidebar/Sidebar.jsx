@@ -76,49 +76,48 @@ export const Sidebar = ({ backgroundLocked = false }) => {
         <ul className="p-4">
           {/* Renderizar elementos del menú */}
           {currentMenu.base.map((menuItem, index) => (
-            <li key={index} className="mb-2">
-              {/* Evaluar si el elemento de menú tiene submenús (items) */}
-              {menuItem.items ? (
-                <>
-                  <button
-                    className='ml-2 w-full menu-sidebar menu-container cursor-pointer'
-                    onClick={() => {
-                      setIsSidebarOpen(true);
-                      setShowSubmenu(!showSubmenu);
-                    }}
-                  >
-                    {menuItem.label}
-                  </button>
-                  {/* Renderizar submenú */}
-                  <ul id="submenu2" className={`ml-4 ${showSubmenu ? 'h-20' : 'h-0'} background-primary rounded transition-all duration-300 flex flex-col justify-center`}>
-                    {currentMenu.base.find(item => item.label === 'Idiomas' || item.label === 'Languages')?.items.map((idioma, index) => (
-                      <li className={`cursor-pointer ${showSubmenu ? 'pointer-events-auto' : 'pointer-events-none'}`} key={index}>
-                        <a className={`${showSubmenu ? 'visible' : 'invisible'} menu-sidebar menu-container`} onClick={() => handleDropdown(idioma.code)}>
-                          {idioma.label}
-                        </a>
-                      </li>
-                    ))}
-                  </ul>
-                </>
-              ) : (
-                // Renderizar enlace normal si no tiene submenús
-                menuItem.visible === true &&
-                (<NavLink
-                  to={menuItem.link}
-                  onClick={() => setIsSidebarOpen(false)} // Cerrar sidebar al hacer clic en un enlace
-                  className={({ isActive }) => `${isActive ? 'current-menu' : 'menu-sidebar'} menu-container`}
+            // Evaluar si el elemento de menú tiene submenús (items)
+            menuItem.items ? (
+              <li key={index} className="mb-2">
+                <button
+                  className='!pl-6 menu'
+                  onClick={() => {
+                    setIsSidebarOpen(true);
+                    setShowSubmenu(!showSubmenu);
+                  }}
                 >
-                  <span className='ml-2 block'>{menuItem.label}</span>
-                </NavLink>)
-              )}
-            </li>
+                  {menuItem.label}
+                </button>
+                {/* Renderizar submenú */}
+                <ul id="submenu2" className={`ml-4 ${showSubmenu ? 'h-20' : 'h-0'} sub-menu background-primary`}>
+                  {currentMenu.base.find(item => item.label === 'Idiomas' || item.label === 'Languages')?.items.map((idioma, subIndex) => (
+                    <li className={`cursor-pointer ${showSubmenu ? 'pointer-events-auto' : 'pointer-events-none'}`} key={subIndex}>
+                      <a className={`${showSubmenu ? 'visible' : 'invisible'} menu`} onClick={() => handleDropdown(idioma.code)}>
+                        {idioma.label}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </li>
+            ) : (
+              // Renderizar enlace normal si no tiene submenús
+              menuItem.visible === true && (
+                <li key={index} className="mb-2 menu-container">
+                  <NavLink
+                    to={menuItem.link}
+                    onClick={() => setIsSidebarOpen(false)} // Cerrar sidebar al hacer clic en un enlace
+                    className={({ isActive }) => `${isActive ? 'current-menu' : 'menu'}`}
+                  >
+                    <span className='ml-2 block'>{menuItem.label}</span>
+                  </NavLink>
+                </li>
+              )
+            )
           ))}
           <li className="mb-2">
-            <div className="flex items-center">
-              <button onClick={handleThemeSwitch} className='ml-2 block menu-sidebar menu-container'>
-                {isDark ? (<HiMoon size={sizeIcons} />) : (<HiSun size={sizeIcons} />)}
-              </button>
-            </div>
+            <button onClick={handleThemeSwitch} className='ml-2 menu !w-auto'>
+              {isDark ? (<HiMoon size={sizeIcons} />) : (<HiSun size={sizeIcons} />)}
+            </button>
           </li>
         </ul>
       </nav>

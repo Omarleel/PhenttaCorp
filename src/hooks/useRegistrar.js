@@ -3,7 +3,7 @@ import { useConnection } from "./useConnection";
 
 export const useRegistrar = () => {
     // Utilizar el hook useLoading
-    const { isLoading, setLoadStatus } = useConnection();
+    const { setLoadStatus } = useConnection();
 
     // Método auxiliar para realizar la llamada a la API y gestionar la respuesta
     const handleApiCall = async (endpoint, dataEnviada) => {
@@ -17,7 +17,8 @@ export const useRegistrar = () => {
             setLoadStatus(true);
             const { data } = await posApi.post(endpoint, dataEnviada, {
                 headers: {
-                    'Content-Type': 'multipart/form-data',
+                    // 'Content-Type': 'multipart/form-data',
+                    'Content-Type': 'application/json'
                 },
             });
             console.log('dataEnviada',dataEnviada)

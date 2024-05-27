@@ -104,6 +104,16 @@ body {
     @apply block my-2 font-medium text-color-primary;
 }
 
+.menu {
+    @apply py-2 px-3 flex items-center text-[#505050] hover:text-white w-full dark:text-white hover:bg-hover-selector-light dark:hover:bg-hover-selector-dark rounded-md;
+}
+.sub-menu {
+    @apply rounded transition-all duration-300 flex flex-col justify-center;
+}
+.current-menu {
+    @apply py-2 px-3 w-full text-white bg-selector-light rounded dark:bg-selector-dark;
+}
+
 h1 {
     @apply text-3xl font-bold mb-4 text-color-primary;
 }
