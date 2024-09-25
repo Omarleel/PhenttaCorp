@@ -19,11 +19,6 @@ jobs:
       - name: Build
         run: yarn build # Ejecutar el comando de build con yarn
 
-      - name: Create build branch if it doesn't exist
-        run: |
-          git fetch
-          git checkout build || git checkout -b build # Intenta cambiar a la rama 'build', si no existe, créala
-
       - name: Push built assets to build branch
         uses: s0/git-publish-subdir-action@develop
         env:
