@@ -16,7 +16,7 @@ jobs:
       - name: Install all dependencies
         run: yarn install
 
-       - name: Build
+      - name: Build
         run: yarn build # Ejecutar el comando de build con yarn
 
       - name: Create build branch if it doesn't exist
