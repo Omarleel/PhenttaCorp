@@ -3,7 +3,7 @@ import { useLanguage } from "../../hooks/useLanguage";
 import { useEffect } from "react";
 import { useLocation } from 'react-router-dom';
 import { useTheme } from "../../hooks/useTheme";
-import { CustomCarousel, CustomSVG } from "../../components";
+import { CustomImageCarousel, CustomSVG } from "../../components";
 
 export const HomePage = () => {
   const { language } = useLanguage();
@@ -64,7 +64,7 @@ export const HomePage = () => {
           ))}
         </div>
         <div className="sm:hidden max-sm:block rounded my-4">
-          <CustomCarousel>
+          <CustomImageCarousel>
             {dataServicios['base'] && dataServicios['base'].map((service, index) => (
               <div key={index} className="background-secondary rounded-lg shadow px-8 pt-4 pb-10 text-center">
                 <CustomSVG svgPath={service.image} fillColor={`${isDark ? 'white' : 'black'}`} />
@@ -72,7 +72,7 @@ export const HomePage = () => {
                 <p>{service.description}</p>
               </div>
             ))}
-          </CustomCarousel>
+          </CustomImageCarousel>
         </div>
       </div>
       {/* Sección de Por qué trabajar con nosotros */}

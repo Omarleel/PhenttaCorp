@@ -1,5 +1,5 @@
 .container-sidebar {
-    @apply sm:hidden bg-secondary-light dark:bg-secondary-dark absolute z-50  transition-all duration-300 ;
+    @apply sm:hidden bg-white absolute z-50  transition-all duration-300 ;
 }
 .container-toggle {
     @apply fixed top-0 right-0 h-[72px] flex justify-between p-4 ml-3;

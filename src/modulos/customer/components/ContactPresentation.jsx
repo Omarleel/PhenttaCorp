@@ -5,7 +5,7 @@ import { contactanos } from "../../../mocks/data";
 
 export const ContactPresentation = () => {
     const { language } = useLanguage();
-    const {setFormCurrentStep: setCurrentStep, setData, getFormCurrentState: currentStep, resetFormSlide} = useFormSlide();
+    const {setFormCurrentStep: setCurrentStep, setData, getFormCurrentStep: currentStep, resetFormSlide} = useFormSlide();
     const dataContactanos = contactanos.find(contactanos => contactanos.idioma === language);
     
     useEffect(() => {

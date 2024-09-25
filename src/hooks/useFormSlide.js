@@ -16,12 +16,12 @@ export const useFormSlide = () => {
     dispatch(resetFormSlideState());
   };
 
-  const getFormCurrentState = useSelector((state) => state.formSlide.currentStep);
+  const getFormCurrentStep = useSelector((state) => state.formSlide.currentStep);
   const getFormData = useSelector((state) => state.formSlide.formData);
 
   return {
     setFormCurrentStep, setData,
-    getFormCurrentState, getFormData,
+    getFormCurrentStep, getFormData,
     resetFormSlide,
   };
 };
