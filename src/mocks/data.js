@@ -218,7 +218,7 @@ export const acercaDe = [
             },
             { 
                 title: "Acerca de Phentta",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate orci ac nulla gravida, sit amet sollicitudin ligula mollis. Maecenas metus purus, porttitor non posuere in, aliquet ut tellus. Aliquam viverra malesuada diam, vitae malesuada libero fermentum in. Vivamus semper ligula id leo maximus interdum. Duis urna diam, suscipit eget vehicula ut, tempus ut magna.",
+                description: "Phentta es una empresa comprometida con la innovación y la excelencia en el ámbito tecnológico. Nos dedicamos a ofrecer soluciones de alta calidad que transforman la forma en que nuestros clientes interactúan con la tecnología. Con un enfoque centrado en el cliente, trabajamos incansablemente para satisfacer sus necesidades y superar sus expectativas.",
             },
             { 
                 title: "Visión",
@@ -239,7 +239,7 @@ export const acercaDe = [
             },
             { 
                 title: "About Phentta",
-                description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus vulputate orci ac nulla gravida, sit amet sollicitudin ligula mollis. Maecenas metus purus, porttitor non posuere in, aliquet ut tellus. Aliquam viverra malesuada diam, vitae malesuada libero fermentum in. Vivamus semper ligula id leo maximus interdum. Duis urna diam, suscipit eget vehicula ut, tempus ut magna.",
+                description: "Phentta is a company committed to innovation and excellence in the technology field. We are dedicated to delivering high-quality solutions that transform the way our customers interact with technology. With a customer-centric approach, we work tirelessly to meet your needs and exceed your expectations.",
             },
             { 
                 title: "Vision",
