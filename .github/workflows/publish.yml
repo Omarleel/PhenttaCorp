@@ -1,4 +1,4 @@
-name: Crear build y pushear en otra rama
+name: Crear build y pushear en otra rama (build)
 
 on:
   push:
