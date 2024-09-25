@@ -48,9 +48,8 @@ export const CustomFormSlide = ({ steps }) => {
           return (
             <div
               key={index}
-              className={`transform transition-transform duration-300 ${
-                currentStep === index ? 'translate-x-0 w-full visile z-20' : 'translate-x-full w-0 h-0 invisible z-10'
-              }`}
+              className={`transform transition-transform duration-300 ${currentStep === index ? 'translate-x-0 w-full visile z-20' : 'translate-x-full w-0 h-0 invisible z-10'
+                }`}
             >
               {form}
             </div>

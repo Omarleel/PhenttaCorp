@@ -6,7 +6,7 @@ import { empleosFormulario } from "../../../mocks/data";
 export const JobsPresentation = () => {
     const { language } = useLanguage();
     const dataEmpleosFormulario = empleosFormulario.find(empleo => empleo.idioma === language);
-    const { setFormCurrentStep: setCurrentStep, setData, getFormCurrentState: currentStep, resetFormSlide } = useFormSlide();
+    const { setFormCurrentStep: setCurrentStep, setData, getFormCurrentStep: currentStep, resetFormSlide } = useFormSlide();
 
     useEffect(() => {
         resetFormSlide();
