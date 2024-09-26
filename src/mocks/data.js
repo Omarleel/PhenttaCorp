@@ -303,7 +303,7 @@ export const preguntasFrecuentes = [
         base: [
             { 
                 title: "¿Cómo puedo comenzar a trabajar con ustedes?",
-                description: "Es fácil comenzar a trabajar con nosotros. Simplemente contáctanos a través de nuestro formulario de contacto en línea o envíanos un correo electrónico a contacto@phentta.com  Uno de nuestros representantes se pondrá en contacto contigo para discutir tus necesidades y cómo podemos ayudarte" 
+                description: "Es fácil comenzar a trabajar con nosotros. Simplemente contáctanos a través de nuestro formulario de contacto en línea o envíanos un correo electrónico. Uno de nuestros representantes se pondrá en contacto contigo para discutir tus necesidades y cómo podemos ayudarte" 
             },
             { 
                 title: "¿Cuál es su enfoque en cuanto a la atención al cliente?",
@@ -329,7 +329,7 @@ export const preguntasFrecuentes = [
         base: [
             {
                 title: "How can I start working with you?",
-                description: "It's easy to start working with us. Simply contact us through our online contact form or email us at contacto@phentta.com One of our representatives will contact you to discuss your needs and how we can help you"
+                description: "It's easy to start working with us. Simply contact us through our online contact form or email. One of our representatives will contact you to discuss your needs and how we can help you"
             },
             {
                 title: "What is your approach to customer service?",
