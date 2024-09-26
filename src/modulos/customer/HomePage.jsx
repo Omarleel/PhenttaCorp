@@ -32,7 +32,7 @@ export const HomePage = () => {
   return (
     <div className="container-page">
       {/* Sección de presentación */}
-      <div id={menuBase[0].link.replace('/', '')} className="background-secondary sm:flex justify-center items-center h-auto relative p-4">
+      <div id={menuBase[0].link.replace('/', '')} className="background-secondary sm:flex justify-center items-center h-screen-minus-48 relative p-4">
         {/* Contenedor del Texto (Columna 2) */}
         <div className="sm:w-2/4 max-sm:w-full max-sm:my-8 text-center sm:order-2">
           {dataPresentacion &&
@@ -45,7 +45,7 @@ export const HomePage = () => {
         </div>
         {/* Contenedor de la Imagen (Columna 1) */}
         <div className="sm:w-2/4 max-sm:w-full sm:order-1 sm:mr-4">
-          <img src="/assets/images/image-1.svg" alt="Phentta" className="w-full" />
+          <img src="/assets/images/image-1.svg" alt="Phentta" className="p-8 max-h-screen-minus-48" />
         </div>
       </div>
       {/* Sección de servicios */}

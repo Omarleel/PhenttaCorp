@@ -9,6 +9,9 @@ module.exports = {
       colors: {
         ...colors,
       },
+      height: {
+        'screen-minus-48': 'calc(100vh - 48px)',
+      },
       boxShadow: {
         'top-md': '0 -4px 6px rgba(0, 0, 0, 0.05)',
       },
@@ -29,6 +32,12 @@ module.exports = {
         },
         '.bg-secondary-dark': {
           backgroundColor: colors.secondaryDark,
+        },
+        '.bg-tertiary-light': {
+          backgroundColor: colors.tertiaryLight,
+        },
+        '.bg-tertiary-dark': {
+          backgroundColor: colors.tertiaryDark,
         },
         '.bg-selector-light': {
           backgroundColor: colors.selectorLight,

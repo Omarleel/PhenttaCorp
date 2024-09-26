@@ -6,6 +6,8 @@ export const colors = {
     primaryDark: '#252836',
     secondaryLight: '#fafafa',
     secondaryDark: '#1f1d2b',
+    tertiaryLight: '#fdf8f6',
+    tertiaryDark: '#282c3f',
     selectorLight: '#fd5555',
     hoverSelectorLight: '#e27171',
     selectorDark: '#ff7943',

@@ -21,6 +21,10 @@ body {
     @apply bg-secondary-light dark:bg-secondary-dark;
 }
 
+.background-tertiary {
+    @apply bg-tertiary-light dark:bg-tertiary-dark;
+}
+
 .text-color-primary {
     @apply text-black dark:text-white;
 }
@@ -140,9 +144,6 @@ img {
     @apply pointer-events-none;
 }
 
-.margin-aboutus {
-    @apply mx-4 py-4 md:mx-36;
-}
 .hover-text {
     @apply hover:text-color-hover dark:hover:text-color-hover-dark;
 }

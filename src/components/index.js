@@ -4,6 +4,7 @@ export * from './CustomEmployeeForm';
 export * from './CustomLoading';
 export * from './CustomModal';
 export * from './CustomTable';
+export * from './CustomSection';
 export * from './CustomSVG';
 export * from './CustomFloatingActionButton';
 export * from './CustomTooltip';

@@ -214,7 +214,7 @@ export const acercaDe = [
         base: [
             { 
                 title: "Phentta es",
-                words: ["tecnología", "innovación", "excelencia", "crecimiento", "soluciones"],
+                words: ["tecnología", "innovación", "excelencia", "crecimiento", "solucion"],
             },
             { 
                 title: "Acerca de Phentta",
@@ -235,7 +235,7 @@ export const acercaDe = [
         base: [
             { 
                 title: "Phentta is",
-                words: ["technology", "innovation", "excellence", "growth", "solutions"],
+                words: ["technology", "innovation", "excellence", "growth", "solution"],
             },
             { 
                 title: "About Phentta",

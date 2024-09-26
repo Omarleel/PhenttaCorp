@@ -45,7 +45,7 @@ export const CustomFormSlide = ({ steps }) => {
       <div className="flex overflow-hidden">
         {steps.map((form, index) => <div
               key={index}
-              className={`transform transition-transform duration-300 ${currentStep === index ? 'translate-x-0 w-full visile z-20' : 'translate-x-full w-0 h-0 invisible z-10'
+              className={`transform transition-transform duration-300 ${currentStep === index ? 'translate-x-0 w-full visile' : 'translate-x-full w-0 h-0 invisible'
                 }`}
             >
               {form}

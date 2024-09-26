@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { CustomImageCarousel } from "../../components";
+import { CustomImageCarousel, CustomSection } from "../../components";
 import { CustomAnimatedText } from "../../components/CustomAnimatedText";
 import { useLanguage } from "../../hooks";
 import { acercaDe, equipoPhentta, preguntasFrecuentes, rutas } from "../../mocks/data"
@@ -20,7 +20,7 @@ export const AboutUsPage = () => {
 
   return (
     <div className="container-page">
-      <div className="margin-aboutus text-justify">
+      <div className="background-tertiary p-8 md:mx-20 text-justify">
         {/* Sección presentación */}
         <div>
           <div className="sm:flex items-center py-4">
@@ -43,7 +43,7 @@ export const AboutUsPage = () => {
           </p>
         </div>
         {/* Sección Visión/Misión */}
-        <div className="background-secondary p-4">
+        <CustomSection>
           <div className="sm:flex items-center my-4">
             <div className="sm:w-3/4 md:mx-10 order-2">
               <h1>{dataAcercaDe[2].title}</h1>
@@ -58,7 +58,7 @@ export const AboutUsPage = () => {
             </div>
             <img src="/assets/images/aboutus/mission.svg" className="w-full sm:w-1/4"></img>
           </div>
-        </div>
+        </CustomSection>
         {/* Sección Equipo */}
         <div className="py-4">
           <h1>Equipo de Phentta</h1>
@@ -86,7 +86,7 @@ export const AboutUsPage = () => {
           </div>
         </div>
         {/* Sección Preguntas frecuentes */}
-        <div className="p-4 background-secondary">
+        <CustomSection>
           <h1>{dataPreguntasFrecuentes.titulo}</h1>
           <hr />
           <div className="flex flex-col">
@@ -110,7 +110,7 @@ export const AboutUsPage = () => {
               ))
             }
           </div>
-        </div>
+        </CustomSection>
       </div>
     </div>
   )

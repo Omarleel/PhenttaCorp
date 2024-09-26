@@ -21,7 +21,7 @@ export const Footer = () => {
     }, [])
 
     return (
-        <footer className="container-page !bg-secondary-light dark:!bg-secondary-dark !mt-0 p-6 shadow-top-md">
+        <footer className="container-page sticky !bg-secondary-light dark:!bg-secondary-dark !mt-0 p-6 shadow-top-md">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-center">
                 {/* Sección "Quiénes somos" */}
                 <div>

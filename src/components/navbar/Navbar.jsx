@@ -66,7 +66,7 @@ export const Navbar = () => {
             </React.Fragment>
           ) : (
             menuItem.visible === true && (<NavLink key={menuItem.label} to={menuItem.link} className={({ isActive }) => `${isActive ? 'current-menu' : 'menu'} z-20`}>
-              <span className="my-0">{menuItem.label}</span>
+              <span className="my-0 whitespace-nowrap">{menuItem.label}</span>
             </NavLink>)
           )
         )}
