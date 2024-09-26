@@ -1,4 +1,5 @@
 export * from './CustomImageCarousel';
+export * from './CustomCarousel';
 export * from './CustomDate';
 export * from './CustomEmployeeForm';
 export * from './CustomLoading';
