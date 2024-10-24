@@ -86,7 +86,6 @@ export const HomePage = () => {
               <div key={index} className="background-secondary rounded-lg shadow p-4 flex">
                 <h1 className="mr-2 mb-0 max-lg:text-6xl text-7xl">{index + 1}</h1>
                 <div className="flex flex-col">
-                  
                   <h2 className="mt-2">{razones.title}</h2>
                   <p className="text-left">{razones.description}</p>
                 </div>
